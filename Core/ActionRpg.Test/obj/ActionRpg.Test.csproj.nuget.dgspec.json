@@ -1,0 +1,401 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Test\\ActionRpg.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj",
+        "projectName": "ActionRpg.Core",
+        "projectPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Test\\ActionRpg.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Test\\ActionRpg.Test.csproj",
+        "projectName": "ActionRpg.Test",
+        "projectPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Test\\ActionRpg.Test.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj"
+              },
+              "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\ActionRpg.Server.GameModels.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\ActionRpg.Server.GameModels.csproj"
+              },
+              "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\ActionRpg.Server.GameServer.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\ActionRpg.Server.GameServer.csproj"
+              },
+              "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\ActionRpg.Server.Grpc.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\ActionRpg.Server.Grpc.csproj"
+              },
+              "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\ActionRpg.Server.Models.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\ActionRpg.Server.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\ActionRpg.Server.GameModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\ActionRpg.Server.GameModels.csproj",
+        "projectName": "ActionRpg.Server.GameModels",
+        "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\ActionRpg.Server.GameModels.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\ActionRpg.Server.GameServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\ActionRpg.Server.GameServer.csproj",
+        "projectName": "ActionRpg.Server.GameServer",
+        "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\ActionRpg.Server.GameServer.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.GameServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\ActionRpg.Server.Grpc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\ActionRpg.Server.Grpc.csproj",
+        "projectName": "ActionRpg.Server.Grpc",
+        "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\ActionRpg.Server.Grpc.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Grpc\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj": {
+                "projectPath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.34.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.11.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\ActionRpg.Server.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\ActionRpg.Server.Models.csproj",
+        "projectName": "ActionRpg.Server.Models",
+        "projectPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\ActionRpg.Server.Models.csproj",
+        "packagesPath": "C:\\Users\\TournyMasterBot\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ActionRPG\\Server\\ActionRpg.Server.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TournyMasterBot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

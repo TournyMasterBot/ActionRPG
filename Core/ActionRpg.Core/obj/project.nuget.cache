@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ghklkyZSxF7tw7wrYjoS86lZUj300WI88KRUq5oBv0d0oslLcuiClGbDff8nFbp+vcpcPsQJnOlKWzNxW/rUFg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\ActionRPG\\Core\\ActionRpg.Core\\ActionRpg.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TournyMasterBot\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
