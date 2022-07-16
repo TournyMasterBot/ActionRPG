@@ -1,0 +1,1 @@
+All service endpoints should have a corresponding security gate check that inspects the requests and returns a true/false flag for whether or not the request should be allowed to continue processing.

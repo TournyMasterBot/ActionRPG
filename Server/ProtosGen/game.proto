@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package omnibot.actionrpg.game.interop;
+
+option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
+
+// Server Imports
+import "connect.proto";
+import "disconnect.proto";
+import "ping.proto";
+
+// Game Imports
+import "report_player_status.proto";
+import "chat.proto";
+
+// Navigation imports
+import "zone.proto";
+import "region.proto";
+import "local_area.proto";
+
+
+service ActionRpgGame {
+	//***********
+	// Server Features
+	rpc Connect(ConnectInput) returns (ConnectOutput);
+	rpc Disconnect(DisconnectInput) returns (DisconnectOutput);
+	rpc Ping(PingInput) returns (PingOutput);
+
+	//***********
+	// Game Features
+	rpc ReportPlayerStatus(ReportPlayerStatusInput) returns(ReportPlayerStatusOutput);
+	rpc SendChatMessage(SendChatInput) returns(SendChatOutput);
+
+	//***********
+	// Navigation
+	rpc ReportZoneChange(ReportZoneChangeInput) returns(ReportZoneChangeOutput);
+	rpc ReportRegionChange(ReportRegionChangeInput) returns(ReportRegionChangeOutput);
+	rpc ReportLocalAreaChange(ReportLocalAreaChangeInput) returns(ReportLocalAreaChangeOutput);
+}
+

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package omnibot.actionrpg.game.interop;
+
+option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
+
+message ReportPlayerStatusInput{
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    int32 health = 3;               // Player health
+    int32 mana = 4;                 // Player mana
+    int32 stamina = 5;              // Player stamina
+    string zone = 6;                // Zone a player is located (IE: World)
+    string region = 7;              // Region a player is located (IE: Map)
+    string local = 8;               // Local proximity to the player, (IE: Hex) 
+    float posX = 9;                 // X position of player
+    float posY = 10;                // Y position of player
+    float posZ = 11;                // Z position of player
+    bool isMoving = 12;             // Is the player moving?
+    bool isGrounded = 13;           // Is the player on the ground?
+    bool isAiming = 14;             // Is the player aiming?
+    bool isAttacking = 15;          // Is the player attacking?
+    string animation = 16;          // Current animation being played
+    string animationStartTime = 17; // When did the animation start
+    string animationEndTime = 18;   // Expected end time for the animation
+}
+
+message ReportPlayerStatusOutput {
+    string message_id = 1;
+	string timestamp = 2;
+	string response_to_message_id = 3;
+    bool accepted = 4;
+}

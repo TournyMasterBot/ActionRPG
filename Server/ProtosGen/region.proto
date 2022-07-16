@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package omnibot.actionrpg.game.interop;
+
+option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
+
+message ReportRegionChangeInput {
+	string message_id = 1;
+	string timestamp = 2;
+	string region_name = 3;
+}
+
+message ReportRegionChangeOutput {
+	string message_id = 1;
+	string timestamp = 2;
+	string response_to_message_id = 3;
+	bool is_success = 4;
+    string status = 5;
+	string message = 6;
+}
