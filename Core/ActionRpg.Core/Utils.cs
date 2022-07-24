@@ -10,6 +10,14 @@ namespace ActionRpg.Core
             return Guid.NewGuid().ToString("d");
         }
 
+        /// <summary>
+        /// Todo : Create random name
+        /// </summary>
+        public static string CreateName()
+        {
+            return Guid.NewGuid().ToString("d");
+        }
+
         public static string ToJson<T>(this T obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.Indented);

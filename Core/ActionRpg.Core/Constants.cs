@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ActionRpg.Core
+﻿namespace ActionRpg.Core
 {
     public static class Constants
     {

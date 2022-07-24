@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\TournyMasterBot\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\TournyMasterBot\\.nuget\\packages"
-    ]
-  }
-}
