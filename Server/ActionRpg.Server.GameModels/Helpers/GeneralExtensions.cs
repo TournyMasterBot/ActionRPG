@@ -11,7 +11,7 @@ namespace ActionRpg.Server.GameModels.Helpers
             return rand.Next(min, max);
         }
 
-        public static IEnumerable<T> GetAll<T>()
+        public static T?[] GetAll<T>()
         {
             return Assembly.GetExecutingAssembly()
                 .GetTypes()
@@ -20,8 +20,8 @@ namespace ActionRpg.Server.GameModels.Helpers
                     !type.IsAbstract &&
                     !type.IsGenericType &&
                     type.GetConstructor(new Type[0]) != null)
-                .Select(type => (T)Activator.CreateInstance(type))
-                .ToList();
+                .Select(type => (T?)Activator.CreateInstance(type))
+                .ToArray();
         }
     }
 }

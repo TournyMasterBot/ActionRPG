@@ -1,5 +1,4 @@
-﻿using ActionRpg.Core;
-using ActionRpg.Server.Grpc.Services;
+﻿using ActionRpg.Server.Grpc.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -7,7 +6,7 @@ using OmniBot.ActionRpg.Game.Requests;
 using System;
 using System.Threading.Tasks;
 
-namespace ActionRpgServer.Test.Grpc.Services
+namespace ActionRpg.Core.Test.Grpc.Services
 {
     [TestClass]
     public class TestServicesReportPlayerStatusEndpoint

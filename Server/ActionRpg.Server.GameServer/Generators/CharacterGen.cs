@@ -2,7 +2,6 @@
 using ActionRpg.Server.GameModels.GeneratorModels;
 using ActionRpg.Server.GameModels.Helpers;
 using ActionRpg.Server.GameModels.Interfaces;
-using System.Reflection;
 using static ActionRpg.Server.GameModels.GameConstants;
 
 namespace ActionRpg.Server.GameServer.Generators
@@ -39,7 +38,7 @@ namespace ActionRpg.Server.GameServer.Generators
                 return null;
             }
             
-            return races.FirstOrDefault(x => x.GetRace().Equals(race));
+            return races.FirstOrDefault(x => x?.GetRace() == race);
         }
 
         private IRace? GenerateRandomRace()
