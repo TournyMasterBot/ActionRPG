@@ -1,2 +1,3 @@
 #!/bin/bash
-dotnet build
+dotnet build "ActionRPG.sln"
+dotnet test --verbosity normal
