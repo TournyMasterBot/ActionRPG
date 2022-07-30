@@ -1,22 +1,25 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["ActionRpgServer.Grpc/ActionRpgServer.Grpc.csproj", "ActionRpgServer.Grpc/"]
-RUN dotnet restore "ActionRpgServer.Grpc/ActionRpgServer.Grpc.csproj"
+COPY ["Server/ActionRpg.Server.Grpc/ActionRpg.Server.Grpc.csproj", "Server/ActionRpg.Server.Grpc/"]
+COPY ["Core/ActionRpg.Models/ActionRpg.Models.csproj", "Core/ActionRpg.Models/"]
+COPY ["Core/ActionRpg.Core/ActionRpg.Core.csproj", "Core/ActionRpg.Core/"]
+COPY ["Server/ActionRpg.Server.GameModels/ActionRpg.Server.GameModels.csproj", "Server/ActionRpg.Server.GameModels/"]
+RUN dotnet restore "Server/ActionRpg.Server.Grpc/ActionRpg.Server.Grpc.csproj"
 COPY . .
-WORKDIR "/src/ActionRpgServer.Grpc"
-RUN dotnet build "ActionRpgServer.Grpc.csproj" -c Release -o /app/build
+WORKDIR "/src/Server/ActionRpg.Server.Grpc"
+RUN dotnet build "ActionRpg.Server.Grpc.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ActionRpgServer.Grpc.csproj" -c Release -o /app/publish
+RUN dotnet publish "ActionRpg.Server.Grpc.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ActionRpgServer.Grpc.dll"]
+ENTRYPOINT ["dotnet", "ActionRpg.Server.Grpc.dll"]
