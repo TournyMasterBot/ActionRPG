@@ -61,7 +61,7 @@ jobs:
 
     - run: |
        echo "Run, Build Application using script"
-       sh ./build.sh
+       dotnet build
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
