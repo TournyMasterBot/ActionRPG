@@ -1,5 +1,5 @@
 > **_NOTE:_**  ActionRPG is a work in progress. 
-This README will be updated as the project progresses.
+  This README will be updated as the project progresses.
 
 # Table of contents
 

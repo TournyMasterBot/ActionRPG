@@ -1,10 +1,20 @@
-﻿using ActionRpg.Server.GameModels.Interfaces;
-using static ActionRpg.Server.GameModels.GameConstants;
+﻿using ActionRpg.Models.RaceModels;
+using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Server.GameModels.Helpers
 {
     public static class RaceHelpers
     {
+        public static IRace? GetRaceFromInt(int raceSelection)
+        {
+            if(raceSelection > Enum.GetValues(typeof(Race)).Length)
+            {
+                return null;
+            }
+            var race = (Race)raceSelection;
+            return GenerateRace(race);
+        }
+
         public static IRace? GenerateRace(Race race)
         {
             var races = GeneralHelpers.GetAll<IRace>().ToArray();

@@ -16,7 +16,7 @@ namespace ActionRpg.Server.Grpc.Services
         public override Task<ReportZoneChangeOutput> ReportZoneChange(ReportZoneChangeInput request, ServerCallContext context)
         {
             var now = DateTime.UtcNow;
-            if (!Gates.SecurityGates.ReportZoneChange.Checkpoint(request))
+            if (!gates.ReportZoneChange.Checkpoint(request))
             {
                 Task.FromResult(new ReportZoneChangeOutput
                 {

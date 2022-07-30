@@ -13,15 +13,16 @@ namespace ActionRpg.Server.GameModels.Helpers
 
         public static T?[] GetAll<T>()
         {
-            return Assembly.GetExecutingAssembly()
-                .GetTypes()
-                .Where(type => typeof(T).IsAssignableFrom(type))
-                .Where(type =>
+            return AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => 
+            x.GetTypes()
+            .Where(type => typeof(T).IsAssignableFrom(type))
+            .Where(type =>
                     !type.IsAbstract &&
                     !type.IsGenericType &&
                     type.GetConstructor(new Type[0]) != null)
                 .Select(type => (T?)Activator.CreateInstance(type))
-                .ToArray();
+                .ToArray()
+            ).ToArray();
         }
     }
 }

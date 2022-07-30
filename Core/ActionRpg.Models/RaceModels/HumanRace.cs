@@ -1,7 +1,6 @@
-﻿using ActionRpg.Server.GameModels.Interfaces;
-using static ActionRpg.Server.GameModels.GameConstants;
+﻿using static ActionRpg.Models.GameConstants;
 
-namespace ActionRpg.Server.GameModels.RaceModels
+namespace ActionRpg.Models.RaceModels
 {
     public class HumanRace : IRace
     {

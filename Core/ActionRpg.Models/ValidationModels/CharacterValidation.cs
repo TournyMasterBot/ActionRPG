@@ -1,4 +1,4 @@
-﻿namespace ActionRpg.Server.Models.ValidationModels
+﻿namespace ActionRpg.Models.ValidationModels
 {
     public class CharacterValidation
     {

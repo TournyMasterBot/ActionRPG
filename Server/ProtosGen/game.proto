@@ -12,6 +12,7 @@ import "ping.proto";
 // Game Imports
 import "report_player_status.proto";
 import "chat.proto";
+import "gen.proto";
 
 // Navigation imports
 import "zone.proto";
@@ -30,6 +31,7 @@ service ActionRpgGame {
 	// Game Features
 	rpc ReportPlayerStatus(ReportPlayerStatusInput) returns(ReportPlayerStatusOutput);
 	rpc SendChatMessage(SendChatInput) returns(SendChatOutput);
+	rpc GenerateCharacter(GenerateCharacterInput) returns(GenerateCharacterOutput);
 
 	//***********
 	// Navigation

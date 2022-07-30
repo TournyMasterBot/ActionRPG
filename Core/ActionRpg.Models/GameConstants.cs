@@ -1,4 +1,4 @@
-﻿namespace ActionRpg.Server.GameModels
+﻿namespace ActionRpg.Models
 {
     public static class GameConstants
     {

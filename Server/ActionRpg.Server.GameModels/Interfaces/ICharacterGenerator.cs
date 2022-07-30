@@ -1,4 +1,5 @@
-﻿using ActionRpg.Server.GameModels.CharacterModels;
+﻿using ActionRpg.Models.CharacterModels;
+using ActionRpg.Models.RaceModels;
 
 namespace ActionRpg.Server.GameModels.Interfaces
 {

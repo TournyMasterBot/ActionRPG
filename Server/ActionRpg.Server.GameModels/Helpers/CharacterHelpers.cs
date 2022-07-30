@@ -1,5 +1,5 @@
 ﻿using ActionRpg.Core;
-using ActionRpg.Server.GameModels.CharacterModels;
+using ActionRpg.Models.CharacterModels;
 
 namespace ActionRpg.Server.GameModels.Helpers
 {

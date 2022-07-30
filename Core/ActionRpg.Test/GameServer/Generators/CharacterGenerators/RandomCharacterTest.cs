@@ -1,6 +1,6 @@
 ﻿using ActionRpg.Server.GameServer.Generators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static ActionRpg.Server.GameModels.GameConstants;
+using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
 {

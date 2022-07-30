@@ -16,7 +16,7 @@ namespace ActionRpg.Server.Grpc.Services
         public override Task<ReportPlayerStatusOutput> ReportPlayerStatus(ReportPlayerStatusInput request, ServerCallContext context)
         {
             var now = DateTime.UtcNow;
-            if (!Gates.SecurityGates.ReportPlayerStatus.Checkpoint(request))
+            if (!gates.ReportPlayerStatus.Checkpoint(request))
             {
                 Task.FromResult(new ReportPlayerStatusOutput
                 {

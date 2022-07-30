@@ -18,7 +18,7 @@ namespace ActionRpg.Server.Grpc.Services
         public override Task<PingOutput> Ping(PingInput request, ServerCallContext context)
         {
             var now = DateTime.UtcNow;
-            if (!Gates.SecurityGates.Ping.Checkpoint(request))
+            if (!gates.Ping.Checkpoint(request))
             {
                 return Task.FromResult(new PingOutput
                 {

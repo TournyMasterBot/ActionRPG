@@ -1,6 +1,6 @@
-﻿using static ActionRpg.Server.GameModels.GameConstants;
+﻿using static ActionRpg.Models.GameConstants;
 
-namespace ActionRpg.Server.GameModels.Interfaces
+namespace ActionRpg.Models.RaceModels
 {
     public interface IRace
     {

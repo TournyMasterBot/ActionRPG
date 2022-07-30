@@ -1,6 +1,6 @@
-﻿using ActionRpg.Server.GameModels.Interfaces;
+﻿using ActionRpg.Models.RaceModels;
 
-namespace ActionRpg.Server.GameModels.CharacterModels
+namespace ActionRpg.Models.CharacterModels
 {
     public interface ICharacter
     {

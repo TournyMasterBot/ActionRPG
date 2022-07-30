@@ -1,6 +1,6 @@
-﻿using ActionRpg.Server.GameModels.CharacterModels;
+﻿using ActionRpg.Models.CharacterModels;
 using ActionRpg.Server.GameModels.Helpers;
-using static ActionRpg.Server.GameModels.GameConstants;
+using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Server.GameServer.Generators
 {

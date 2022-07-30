@@ -1,9 +1,9 @@
-﻿using ActionRpg.Server.GameModels.CharacterModels;
-using ActionRpg.Server.GameModels.RaceModels;
+﻿using ActionRpg.Models.CharacterModels;
+using ActionRpg.Models.RaceModels;
 using ActionRpg.Server.GameServer.Generators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using static ActionRpg.Server.GameModels.GameConstants;
+using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
 {

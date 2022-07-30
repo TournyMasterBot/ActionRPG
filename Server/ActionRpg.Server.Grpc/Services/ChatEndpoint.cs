@@ -12,7 +12,7 @@ namespace ActionRpg.Server.Grpc.Services
         public override Task<SendChatOutput> SendChatMessage(SendChatInput request, ServerCallContext context)
         {
             var now = DateTime.UtcNow;
-            if (!Gates.SecurityGates.SendChat.Checkpoint(request))
+            if (!gates.SendChat.Checkpoint(request))
             {
                 return Task.FromResult(new SendChatOutput()
                 {
