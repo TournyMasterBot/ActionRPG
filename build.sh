@@ -1,1 +1,2 @@
-dotnet build "./ActionRpg.sln"
+#!/bin/bash
+dotnet build
