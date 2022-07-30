@@ -1,4 +1,4 @@
-name: dotnet package
+name: "Code Analysis"
 
 on: [push]
 
@@ -17,7 +17,7 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore ../../ActionRPG.sln
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
