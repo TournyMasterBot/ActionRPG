@@ -1,54 +1,35 @@
-﻿using ActionRpg.Server.GameModels.Extensions.GeneratorExtensions;
-using ActionRpg.Server.GameModels.GeneratorModels;
+﻿using ActionRpg.Server.GameModels.CharacterModels;
 using ActionRpg.Server.GameModels.Helpers;
-using ActionRpg.Server.GameModels.Interfaces;
 using static ActionRpg.Server.GameModels.GameConstants;
 
 namespace ActionRpg.Server.GameServer.Generators
 {
     public class CharacterGen
     {
-        public CharacterGeneratorModel GenerateCharacter(Race race)
+        public Character GenerateCharacter()
         {
-            return new CharacterGeneratorModel(new CharacterGeneratorInputModel()
-            {
-                Race = GenerateRace(race),
-            })
-            { }.CreateFullCharacter();
+            return CharacterHelpers.GenerateCharacter(new CreateCharacterInput(){});
         }
 
-        public CharacterGeneratorModel GenerateCharacter(CharacterGeneratorInputModel? input = null)
+        public Character GenerateCharacter(Race _race)
         {
-            if (input != null)
+            var race = RaceHelpers.GenerateRace(_race);
+            if (race == null)
             {
-                return new CharacterGeneratorModel(input);
+                throw new NullReferenceException(nameof(race));
             }
-
-            return new CharacterGeneratorModel(new CharacterGeneratorInputModel() 
+            return CharacterHelpers.GenerateCharacter(new CreateCharacterInput()
             {
-                Race = GenerateRandomRace(),
-            }) { }.CreateFullCharacter();
+                Character = new Character()
+                {
+                    Race = race,
+                }
+            });
         }
 
-        private IRace? GenerateRace(Race race)
+        public Character GenerateCharacter(CreateCharacterInput input)
         {
-            var races = GeneralHelpers.GetAll<IRace>().ToArray();
-            if (races.Length == 0)
-            {
-                return null;
-            }
-            
-            return races.FirstOrDefault(x => x?.GetRace() == race);
-        }
-
-        private IRace? GenerateRandomRace()
-        {
-           var races = GeneralHelpers.GetAll<IRace>().ToArray();
-           if(races.Length == 0)
-            {
-                return null;
-            }
-            return races[GeneralHelpers.GetRandBetweenTwoNumbers(0, races.Length - 1)];
+            return CharacterHelpers.GenerateCharacter(input);
         }
     }
 }

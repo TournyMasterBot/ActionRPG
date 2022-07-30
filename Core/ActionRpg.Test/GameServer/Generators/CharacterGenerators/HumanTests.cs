@@ -1,4 +1,4 @@
-﻿using ActionRpg.Server.GameModels.GeneratorModels;
+﻿using ActionRpg.Server.GameModels.CharacterModels;
 using ActionRpg.Server.GameModels.RaceModels;
 using ActionRpg.Server.GameServer.Generators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -29,12 +29,7 @@ namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
             var id = Guid.NewGuid().ToString("d");
             var name = Guid.NewGuid().ToString("d");
             var race = new HumanRace();
-            var human = generator.GenerateCharacter(new CharacterGeneratorInputModel()
-            {
-                ID = id,
-                Name = name,
-                Race = race
-            });
+            var human = generator.GenerateCharacter(new CreateCharacterInput(id, name, race));
             Assert.IsNotNull(human);
             Assert.AreEqual(id, human.ID);
             Assert.AreEqual(name, human.Name);

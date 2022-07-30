@@ -1,8 +1,10 @@
-﻿namespace ActionRpg.Server.GameModels.Interfaces
+﻿using ActionRpg.Server.GameModels.CharacterModels;
+
+namespace ActionRpg.Server.GameModels.Interfaces
 {
-    internal interface ICharacterGenerator
+    public interface ICharacterGenerator
     {
-        public string ID { get; set; }
-        public string Name { get; set; }
+        public ICharacter Character { get; set; }
+        public IRace Race { get; set; }
     }
 }
