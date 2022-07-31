@@ -24,5 +24,11 @@ namespace ActionRpg.Server.GameModels.Helpers
                 .ToArray()
             ).ToArray();
         }
+
+        public static IEnumerable<T> GetEnumItems<T>()
+        {
+            T[] array = (T[])Enum.GetValues(typeof(T));
+            return array;
+        }
     }
 }

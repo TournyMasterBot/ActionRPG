@@ -7,21 +7,21 @@ namespace ActionRpg.Models.RaceModels
         /// <summary>
         /// True: Race is fully configured and playable
         /// </summary>
-        bool IsActive();
+        bool GetIsActive();
         /// <summary>
         /// Can be controlled by players
         /// </summary>
-        bool IsPlayable();
+        bool GetIsPlayable();
         /// <summary>
         /// Max level cap
         /// </summary>
-        int MaxLevel();
+        int GetMaxLevel();
         /// <summary>
         /// Equation used to grow the character when it levels
         /// TODO : Pass in a character model, return a modified character model
         /// Alternatively, pass growth metrics back to calling method? TBD
         /// </summary>
-        void StatGrowth();
+        void GetStatGrowth();
         /// <summary>
         /// Gets race details
         /// </summary>
@@ -30,6 +30,10 @@ namespace ActionRpg.Models.RaceModels
         /// Defines whether or not the race can transcend their normal limits and be reborn
         /// TODO : Work out methods for ascension.
         /// </summary>
-        bool CanTranscend();
+        bool GetCanTranscend();
+        /// <summary>
+        /// Defines whether or not the current race is a transcended race
+        /// </summary>
+        bool IsTranscendedRace();
     }
 }

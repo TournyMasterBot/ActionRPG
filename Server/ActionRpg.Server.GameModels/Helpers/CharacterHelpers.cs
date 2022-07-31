@@ -7,7 +7,7 @@ namespace ActionRpg.Server.GameModels.Helpers
     {
         public static Character GenerateCharacter(CreateCharacterInput input)
         {
-            Character? character = null;
+            Character character;
             if (input == null)
             {
                 character = new Character();
@@ -18,7 +18,8 @@ namespace ActionRpg.Server.GameModels.Helpers
                 {
                     ID = input.Character.ID ?? Utils.CreateIdentifier(),
                     Name = input.Character.Name ?? Utils.CreateName(),
-                    Race = input.Character.Race ?? RaceHelpers.GenerateRandomRace()
+                    Race = input.Character.Race ?? RaceHelpers.GenerateRandomRace(),
+                    Profession = input.Character.Profession ?? ProfessionHelpers.GenerateRandomProfession(),
                 };
             }
             

@@ -40,5 +40,10 @@ namespace ActionRpg.Server.GameModels.Helpers
             }
             return race;
         }
+
+        public static Race[] GetAllRaces()
+        {
+            return GeneralHelpers.GetEnumItems<Race>().Where(x => x != Race.Unknown).ToArray();
+        }
     }
 }

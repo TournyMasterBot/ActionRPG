@@ -1,5 +1,6 @@
 ﻿using ActionRpg.Models.CharacterModels;
 using ActionRpg.Models.RaceModels;
+using ActionRpg.Models.ProfessionModels;
 using ActionRpg.Server.GameServer.Generators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -29,11 +30,13 @@ namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
             var id = Guid.NewGuid().ToString("d");
             var name = Guid.NewGuid().ToString("d");
             var race = new HumanRace();
-            var human = generator.GenerateCharacter(new CreateCharacterInput(id, name, race));
+            var profession = new WarriorProfession();
+            var human = generator.GenerateCharacter(new CreateCharacterInput(id, name, race, profession));
             Assert.IsNotNull(human);
             Assert.AreEqual(id, human.ID);
             Assert.AreEqual(name, human.Name);
             Assert.AreEqual(race, human.Race);
+            Assert.AreEqual(profession, human.Profession);
         }
     }
 }

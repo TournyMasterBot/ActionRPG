@@ -14,6 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Models", "Core\ActionRpg.Models\ActionRpg.Models.csproj", "{67E02D05-3AFE-4E27-BCE3-F04D3F3083F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Core.TestGameClient", "Core\ActionRpg.TestGameClient\ActionRpg.Core.TestGameClient.csproj", "{6731C5E0-3075-465F-8474-48D1E0407766}"
+	ProjectSection(ProjectDependencies) = postProject
+		{90A53013-63F3-4CE9-B09F-D3896E6A6097} = {90A53013-63F3-4CE9-B09F-D3896E6A6097}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Client.GameClient", "Client\ActionRpg.Client.GameClient\ActionRpg.Client.GameClient.csproj", "{CE5A4B6C-37B7-4CAB-9167-2C6B9FF095A0}"
 EndProject

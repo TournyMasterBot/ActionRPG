@@ -1,4 +1,5 @@
-﻿using ActionRpg.Models.RaceModels;
+﻿using ActionRpg.Models.ProfessionModels;
+using ActionRpg.Models.RaceModels;
 
 namespace ActionRpg.Models.CharacterModels
 {
@@ -11,13 +12,14 @@ namespace ActionRpg.Models.CharacterModels
             Character = new Character();
         }
 
-        public CreateCharacterInput(string id, string name, IRace race)
+        public CreateCharacterInput(string id, string name, IRace race, IProfession profession)
         {
             Character = new Character()
             {
                 ID = id,
                 Name = name,
-                Race = race
+                Race = race,
+                Profession = profession
             };
         }
     }

@@ -49,7 +49,7 @@ namespace ActionRpg.Client.GameClient.Grpc
             return output;
         }
 
-        public async Task<GenerateCharacterOutput> GenerateCharacter(string name, int race)
+        public async Task<GenerateCharacterOutput> GenerateCharacter(string name, int race, int profession)
         {
             {
                 var output = await client.GenerateCharacterAsync(new GenerateCharacterInput()
@@ -57,7 +57,8 @@ namespace ActionRpg.Client.GameClient.Grpc
                     MessageId = Utils.CreateIdentifier(),
                     Timestamp = DateTime.UtcNow.ToString(Constants.TimeFormat),
                     Name = name,
-                    Race = race
+                    Race = race,
+                    Profession = profession,
                 });
                 return output;
             };

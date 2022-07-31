@@ -36,10 +36,12 @@ namespace ActionRpg.Server.Grpc.Services
                 Character = new Character()
                 {
                     Name = request.Name,
-                    Race = RaceHelpers.GetRaceFromInt(request.Race)
+                    Race = RaceHelpers.GetRaceFromInt(request.Race),
+                    Profession = ProfessionHelpers.GetProfessionFromInt(request.Profession)
                 }
             });
             var returnCharacter = new CharacterGrpcOutput(character);
+            logger.LogDebug(returnCharacter.ToJson());
             return Task.FromResult(new GenerateCharacterOutput()
             {
                 MessageId = Utils.CreateIdentifier(),

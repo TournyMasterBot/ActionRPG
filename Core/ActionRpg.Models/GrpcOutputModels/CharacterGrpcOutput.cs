@@ -12,12 +12,15 @@ namespace ActionRpg.Models.GrpcOutputModels
         public string Name { get; set; }
         [JsonProperty(PropertyName = "race")]
         public Race Race { get; set; }
+        [JsonProperty(PropertyName = "profession")]
+        public Profession Profession { get; set; }
 
         public CharacterGrpcOutput(Character character)
         {
             ID = character.ID;
             Name = character.Name;
             Race = character.Race.GetRace();
+            Profession = character.Profession.GetProfession();
         }
     }
 }
