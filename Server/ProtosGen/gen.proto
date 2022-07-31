@@ -9,6 +9,7 @@ message GenerateCharacterInput {
     string timestamp = 2;
     string name = 3;
     int32 race = 4;
+    int32 profession = 5;
 }
 
 message GenerateCharacterOutput {

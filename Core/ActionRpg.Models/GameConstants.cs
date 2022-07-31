@@ -28,12 +28,26 @@
             Centaur = 21,
             Dryad = 22,
             Gnome = 23,
+        }
 
+        public enum Profession
+        {
+            Unknown = 0,
+            Warrior = 1,
+            Mage = 2,
+            Cleric = 3,
         }
 
         public static Dictionary<Race, int> RaceMaxLevel = new Dictionary<Race, int>()
         {
             { Race.Human, 100 },
+        };
+
+        public static Dictionary<Profession, int> ProfessionMaxLevel = new Dictionary<Profession, int>()
+        {
+            { Profession.Warrior, 100 },
+            { Profession.Mage, 100 },
+            { Profession.Cleric, 100 },
         };
     }
 }

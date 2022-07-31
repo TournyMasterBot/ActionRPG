@@ -24,17 +24,17 @@ namespace OmniBot.ActionRpg.Game.Requests {
     static GenReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CglnZW4ucHJvdG8SHm9tbmlib3QuYWN0aW9ucnBnLmdhbWUuaW50ZXJvcCJb",
+            "CglnZW4ucHJvdG8SHm9tbmlib3QuYWN0aW9ucnBnLmdhbWUuaW50ZXJvcCJv",
             "ChZHZW5lcmF0ZUNoYXJhY3RlcklucHV0EhIKCm1lc3NhZ2VfaWQYASABKAkS",
             "EQoJdGltZXN0YW1wGAIgASgJEgwKBG5hbWUYAyABKAkSDAoEcmFjZRgEIAEo",
-            "BSJuChdHZW5lcmF0ZUNoYXJhY3Rlck91dHB1dBISCgptZXNzYWdlX2lkGAEg",
-            "ASgJEhEKCXRpbWVzdGFtcBgCIAEoCRIeChZyZXNwb25zZV90b19tZXNzYWdl",
-            "X2lkGAMgASgJEgwKBGRhdGEYBCABKAlCIqoCH09tbmlCb3QuQWN0aW9uUnBn",
-            "LkdhbWUuUmVxdWVzdHNiBnByb3RvMw=="));
+            "BRISCgpwcm9mZXNzaW9uGAUgASgFIm4KF0dlbmVyYXRlQ2hhcmFjdGVyT3V0",
+            "cHV0EhIKCm1lc3NhZ2VfaWQYASABKAkSEQoJdGltZXN0YW1wGAIgASgJEh4K",
+            "FnJlc3BvbnNlX3RvX21lc3NhZ2VfaWQYAyABKAkSDAoEZGF0YRgEIAEoCUIi",
+            "qgIfT21uaUJvdC5BY3Rpb25ScGcuR2FtZS5SZXF1ZXN0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput), global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput.Parser, new[]{ "MessageId", "Timestamp", "Name", "Race" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput), global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput.Parser, new[]{ "MessageId", "Timestamp", "Name", "Race", "Profession" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput), global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput.Parser, new[]{ "MessageId", "Timestamp", "ResponseToMessageId", "Data" }, null, null, null)
           }));
     }
@@ -71,6 +71,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
       timestamp_ = other.timestamp_;
       name_ = other.name_;
       race_ = other.race_;
+      profession_ = other.profession_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +124,17 @@ namespace OmniBot.ActionRpg.Game.Requests {
       }
     }
 
+    /// <summary>Field number for the "profession" field.</summary>
+    public const int ProfessionFieldNumber = 5;
+    private int profession_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Profession {
+      get { return profession_; }
+      set {
+        profession_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GenerateCharacterInput);
@@ -140,6 +152,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
       if (Timestamp != other.Timestamp) return false;
       if (Name != other.Name) return false;
       if (Race != other.Race) return false;
+      if (Profession != other.Profession) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -150,6 +163,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
       if (Timestamp.Length != 0) hash ^= Timestamp.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Race != 0) hash ^= Race.GetHashCode();
+      if (Profession != 0) hash ^= Profession.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -179,6 +193,10 @@ namespace OmniBot.ActionRpg.Game.Requests {
         output.WriteRawTag(32);
         output.WriteInt32(Race);
       }
+      if (Profession != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Profession);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -198,6 +216,9 @@ namespace OmniBot.ActionRpg.Game.Requests {
       }
       if (Race != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Race);
+      }
+      if (Profession != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Profession);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -221,6 +242,9 @@ namespace OmniBot.ActionRpg.Game.Requests {
       }
       if (other.Race != 0) {
         Race = other.Race;
+      }
+      if (other.Profession != 0) {
+        Profession = other.Profession;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -247,6 +271,10 @@ namespace OmniBot.ActionRpg.Game.Requests {
           }
           case 32: {
             Race = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Profession = input.ReadInt32();
             break;
           }
         }

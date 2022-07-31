@@ -9,29 +9,34 @@ namespace ActionRpg.Models.RaceModels
             return Race.Human;
         }
 
-        public bool IsActive()
+        public bool GetIsActive()
         {
             return true;
         }
 
-        public bool IsPlayable()
+        public bool GetIsPlayable()
         {
             return true;
         }
 
-        public int MaxLevel()
+        public int GetMaxLevel()
         {
             return 100;
         }
 
-        public void StatGrowth()
+        public void GetStatGrowth()
         {
             throw new NotImplementedException();
         }
 
-        public bool CanTranscend()
+        public bool GetCanTranscend()
         {
             return true;
+        }
+
+        public bool IsTranscendedRace()
+        {
+            return false;
         }
     }
 }
