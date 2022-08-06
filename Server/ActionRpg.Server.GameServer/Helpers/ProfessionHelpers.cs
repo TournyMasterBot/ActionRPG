@@ -1,7 +1,7 @@
 ﻿using ActionRpg.Models.ProfessionModels;
 using static ActionRpg.Models.GameConstants;
 
-namespace ActionRpg.Server.GameModels.Helpers
+namespace ActionRpg.Server.GameServer.Helpers
 {
     public static class ProfessionHelpers
     {

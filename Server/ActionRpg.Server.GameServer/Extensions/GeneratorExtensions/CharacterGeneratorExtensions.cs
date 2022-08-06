@@ -1,7 +1,7 @@
 ﻿using ActionRpg.Models.CharacterModels;
 using ActionRpg.Models.ValidationModels;
 
-namespace ActionRpg.Server.GameModels.Extensions.GeneratorExtensions
+namespace ActionRpg.Server.GameServer.Extensions.GeneratorExtensions
 {
     public static class CharacterGeneratorExtensions
     {

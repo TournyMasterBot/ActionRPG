@@ -20,8 +20,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Core.TestGameClie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Client.GameClient", "Client\ActionRpg.Client.GameClient\ActionRpg.Client.GameClient.csproj", "{CE5A4B6C-37B7-4CAB-9167-2C6B9FF095A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Server.GameModels", "Server\ActionRpg.Server.GameModels\ActionRpg.Server.GameModels.csproj", "{A0F5DEC8-203A-4934-BAFD-E7879FDA2C93}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Server.GameServer", "Server\ActionRpg.Server.GameServer\ActionRpg.Server.GameServer.csproj", "{68C022A2-021F-4036-AB34-38FBC51575C2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Server.Grpc", "Server\ActionRpg.Server.Grpc\ActionRpg.Server.Grpc.csproj", "{E35656A6-3ED4-43BE-A49D-B02A0CA1D1D4}"
@@ -50,10 +48,6 @@ Global
 		{CE5A4B6C-37B7-4CAB-9167-2C6B9FF095A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5A4B6C-37B7-4CAB-9167-2C6B9FF095A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE5A4B6C-37B7-4CAB-9167-2C6B9FF095A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0F5DEC8-203A-4934-BAFD-E7879FDA2C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0F5DEC8-203A-4934-BAFD-E7879FDA2C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0F5DEC8-203A-4934-BAFD-E7879FDA2C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0F5DEC8-203A-4934-BAFD-E7879FDA2C93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{68C022A2-021F-4036-AB34-38FBC51575C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68C022A2-021F-4036-AB34-38FBC51575C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C022A2-021F-4036-AB34-38FBC51575C2}.Release|Any CPU.ActiveCfg = Release|Any CPU

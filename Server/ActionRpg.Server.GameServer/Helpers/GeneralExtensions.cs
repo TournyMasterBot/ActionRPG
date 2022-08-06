@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace ActionRpg.Server.GameModels.Helpers
+namespace ActionRpg.Server.GameServer.Helpers
 {
     public static class GeneralHelpers
     {

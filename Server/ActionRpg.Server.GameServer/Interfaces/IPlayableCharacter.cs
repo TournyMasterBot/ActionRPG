@@ -1,4 +1,4 @@
-﻿namespace ActionRpg.Server.GameModels.Interfaces
+﻿namespace ActionRpg.Server.GameServer.Interfaces
 {
     internal interface IPlayableCharacter
     {

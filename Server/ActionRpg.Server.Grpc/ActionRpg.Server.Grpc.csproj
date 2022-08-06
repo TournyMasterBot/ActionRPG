@@ -21,7 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\ActionRpg.Core\ActionRpg.Core.csproj" />
     <ProjectReference Include="..\..\Core\ActionRpg.Models\ActionRpg.Models.csproj" />
-    <ProjectReference Include="..\ActionRpg.Server.GameModels\ActionRpg.Server.GameModels.csproj" />
+    <ProjectReference Include="..\ActionRpg.Server.GameServer\ActionRpg.Server.GameServer.csproj" />
   </ItemGroup>
 
 </Project>

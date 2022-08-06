@@ -8,7 +8,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\ActionRpg.Models\ActionRpg.Models.csproj" />
-    <ProjectReference Include="..\ActionRpg.Server.GameModels\ActionRpg.Server.GameModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\CharacterExtensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

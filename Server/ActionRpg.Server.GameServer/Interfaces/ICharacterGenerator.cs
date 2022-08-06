@@ -1,7 +1,7 @@
 ﻿using ActionRpg.Models.CharacterModels;
 using ActionRpg.Models.RaceModels;
 
-namespace ActionRpg.Server.GameModels.Interfaces
+namespace ActionRpg.Server.GameServer.Interfaces
 {
     public interface ICharacterGenerator
     {
