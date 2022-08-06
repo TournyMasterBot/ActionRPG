@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Server\ActionRpg.Server.GameModels\ActionRpg.Server.GameModels.csproj" />
     <ProjectReference Include="..\..\Server\ActionRpg.Server.GameServer\ActionRpg.Server.GameServer.csproj" />
     <ProjectReference Include="..\..\Server\ActionRpg.Server.Grpc\ActionRpg.Server.Grpc.csproj" />
     <ProjectReference Include="..\ActionRpg.Core\ActionRpg.Core.csproj" />

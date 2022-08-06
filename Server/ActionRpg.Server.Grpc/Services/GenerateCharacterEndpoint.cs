@@ -2,7 +2,7 @@
 using ActionRpg.Models.CharacterModels;
 using ActionRpg.Models.GrpcOutputModels;
 using ActionRpg.Models.ValidationModels;
-using ActionRpg.Server.GameModels.Helpers;
+using ActionRpg.Server.GameServer.Helpers;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using OmniBot.ActionRpg.Game.Requests;

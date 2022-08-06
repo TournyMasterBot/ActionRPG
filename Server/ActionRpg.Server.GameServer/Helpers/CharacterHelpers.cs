@@ -1,7 +1,7 @@
 ﻿using ActionRpg.Core;
 using ActionRpg.Models.CharacterModels;
 
-namespace ActionRpg.Server.GameModels.Helpers
+namespace ActionRpg.Server.GameServer.Helpers
 {
     public static class CharacterHelpers
     {

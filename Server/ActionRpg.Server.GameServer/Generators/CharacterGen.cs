@@ -1,5 +1,5 @@
 ﻿using ActionRpg.Models.CharacterModels;
-using ActionRpg.Server.GameModels.Helpers;
+using ActionRpg.Server.GameServer.Helpers;
 using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Server.GameServer.Generators
