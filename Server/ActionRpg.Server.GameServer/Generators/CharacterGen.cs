@@ -8,7 +8,7 @@ namespace ActionRpg.Server.GameServer.Generators
     {
         public Character GenerateCharacter()
         {
-            return CharacterHelpers.GenerateCharacter(new CreateCharacterInput(){});
+            return CharacterHelpers.GenerateCharacter(new CreateCharacterInput() { });
         }
 
         public Character GenerateCharacter(Race _race)

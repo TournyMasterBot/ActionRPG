@@ -1,3 +1,3 @@
-dotnet restore "ActionRPG.sln"
-dotnet build --configuration Release --no-restore "ActionRPG.sln"
-dotnet test --no-restore --verbosity normal "ActionRPG.sln"
+dotnet restore "ActionRpg.sln"
+dotnet build --configuration Debug --no-restore "ActionRpg.sln"
+dotnet test --no-restore --verbosity normal "ActionRpg.sln"

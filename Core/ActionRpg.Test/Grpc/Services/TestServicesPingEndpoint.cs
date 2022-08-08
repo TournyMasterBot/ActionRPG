@@ -6,7 +6,7 @@ using OmniBot.ActionRpg.Game.Requests;
 using System;
 using System.Threading.Tasks;
 
-namespace ActionRpg.Core.Test.Grpc.Endpoints
+namespace ActionRpg.Core.Test.Grpc.Services
 {
     [TestClass]
     public class TestServicesPingEndpoint
@@ -14,7 +14,7 @@ namespace ActionRpg.Core.Test.Grpc.Endpoints
         private static string testMessageID = Utils.CreateIdentifier();
         private static ILogger<ActionRpgGameService> logger;
         private static ActionRpgGameService actionRpgGameServer;
-        
+
         public TestServicesPingEndpoint()
         {
             // Initialize Logger
@@ -28,7 +28,7 @@ namespace ActionRpg.Core.Test.Grpc.Endpoints
             actionRpgGameServer = new ActionRpgGameService(logger);
         }
 
-        
+
         // Invalid Format
         [TestMethod]
         public async Task TestPingEndpointInvalidFormat()

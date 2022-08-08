@@ -22,7 +22,7 @@ namespace ActionRpg.Server.GameServer.Helpers
                     Profession = input.Character.Profession ?? ProfessionHelpers.GenerateRandomProfession(),
                 };
             }
-            
+
             return character;
         }
     }
