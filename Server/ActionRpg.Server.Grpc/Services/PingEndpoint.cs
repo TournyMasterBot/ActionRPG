@@ -52,7 +52,7 @@ namespace ActionRpg.Server.Grpc.Services
             logger.LogDebug($"Ping Request Time Difference: {timeDiff}");
 
             // If latency is too high...
-            if(timeDiff > maxLatency)
+            if (timeDiff > maxLatency)
             {
                 return Task.FromResult(new PingOutput
                 {
@@ -66,7 +66,7 @@ namespace ActionRpg.Server.Grpc.Services
             }
 
             // If impossible timestamp...
-            if(timeDiff < 0)
+            if (timeDiff < 0)
             {
                 return Task.FromResult(new PingOutput
                 {

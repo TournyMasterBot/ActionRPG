@@ -14,4 +14,8 @@
     <ProjectReference Include="..\ActionRpg.Core\ActionRpg.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="TrackingModels\" />
+  </ItemGroup>
+
 </Project>

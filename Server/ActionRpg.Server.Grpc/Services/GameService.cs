@@ -12,6 +12,6 @@ namespace ActionRpg.Server.Grpc.Services
         {
             logger = _logger;
             gates = new Gates.SecurityGates();
-        }        
+        }
     }
 }

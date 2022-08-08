@@ -6,7 +6,7 @@ namespace ActionRpg.Models.ProfessionModels
     {
         public bool IsRaceRestricted(Race race)
         {
-            if(GetSupportedRaces().Contains(race))
+            if (GetSupportedRaces().Contains(race))
             {
                 return false;
             }

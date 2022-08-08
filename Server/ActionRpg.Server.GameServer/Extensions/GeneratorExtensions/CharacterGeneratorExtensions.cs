@@ -7,7 +7,7 @@ namespace ActionRpg.Server.GameServer.Extensions.GeneratorExtensions
     {
         public static CharacterValidation ValidateCharacterGeneratorInputModel(this CreateCharacterInput input)
         {
-            if(input == null)
+            if (input == null)
             {
                 return new CharacterValidation()
                 {
@@ -15,7 +15,7 @@ namespace ActionRpg.Server.GameServer.Extensions.GeneratorExtensions
                     Error = new ArgumentNullException(nameof(input))
                 };
             }
-            if(input.Character == null)
+            if (input.Character == null)
             {
                 return new CharacterValidation()
                 {
@@ -23,7 +23,7 @@ namespace ActionRpg.Server.GameServer.Extensions.GeneratorExtensions
                     Error = new ArgumentNullException(nameof(input.Character))
                 };
             }
-            if(string.IsNullOrWhiteSpace(input.Character.ID))
+            if (string.IsNullOrWhiteSpace(input.Character.ID))
             {
                 return new CharacterValidation()
                 {
@@ -39,7 +39,7 @@ namespace ActionRpg.Server.GameServer.Extensions.GeneratorExtensions
                     Error = new ArgumentNullException(nameof(input.Character.Name))
                 };
             }
-            if(input.Character.Race == null)
+            if (input.Character.Race == null)
             {
                 return new CharacterValidation()
                 {

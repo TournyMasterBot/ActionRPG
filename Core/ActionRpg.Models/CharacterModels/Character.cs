@@ -1,6 +1,5 @@
 ﻿using ActionRpg.Models.ProfessionModels;
 using ActionRpg.Models.RaceModels;
-using Newtonsoft.Json;
 
 namespace ActionRpg.Models.CharacterModels
 {

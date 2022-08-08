@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static ActionRpg.Models.GameConstants;
 
-namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
+namespace ActionRpg.Core.Test.GameServer.Generators.CharacterGenerators
 {
     [TestClass]
     public class RandomCharacterTest

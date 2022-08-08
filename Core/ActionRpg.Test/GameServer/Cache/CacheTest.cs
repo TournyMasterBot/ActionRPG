@@ -1,9 +1,9 @@
-﻿using ActionRpg.Server.GameServer.Cache;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ActionRpg.Models.RaceModels;
+﻿using ActionRpg.Core.Cache;
 using ActionRpg.Models;
-using ActionRpg.Server.GameServer.Generators;
 using ActionRpg.Models.CharacterModels;
+using ActionRpg.Models.RaceModels;
+using ActionRpg.Server.GameServer.Generators;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ActionRpg.Core.Test.GameServer.Cache
 {
@@ -31,7 +31,7 @@ namespace ActionRpg.Core.Test.GameServer.Cache
             var fetchMap = cache.GetMappedValues<int>(new[] { "test-set-1", "test-set-2", "test-set-3" });
             Assert.IsTrue(fetchMap.Count == 3);
             Assert.IsTrue(fetchMap.ContainsKey("test-set-1"));
-            Assert.AreEqual(fetchMap["test-set-1"],  5);
+            Assert.AreEqual(fetchMap["test-set-1"], 5);
             Assert.IsTrue(fetchMap.ContainsKey("test-set-2"));
             Assert.AreEqual(fetchMap["test-set-2"], 10);
             Assert.IsTrue(fetchMap.ContainsKey("test-set-3"));

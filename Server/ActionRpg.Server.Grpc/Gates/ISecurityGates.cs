@@ -1,6 +1,4 @@
-﻿using ActionRpg.Server.Grpc.Gates;
-
-namespace ActionRpg.Server.Grpc.SecurityGates
+﻿namespace ActionRpg.Server.Grpc.Gates
 {
     public interface ISecurityGates
     {

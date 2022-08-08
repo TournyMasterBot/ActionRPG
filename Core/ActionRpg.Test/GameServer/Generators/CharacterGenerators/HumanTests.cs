@@ -1,12 +1,12 @@
 ﻿using ActionRpg.Models.CharacterModels;
-using ActionRpg.Models.RaceModels;
 using ActionRpg.Models.ProfessionModels;
+using ActionRpg.Models.RaceModels;
 using ActionRpg.Server.GameServer.Generators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using static ActionRpg.Models.GameConstants;
 
-namespace ActionRpg.Test.GameServer.Generators.CharacterGenerators
+namespace ActionRpg.Core.Test.GameServer.Generators.CharacterGenerators
 {
 
     [TestClass]

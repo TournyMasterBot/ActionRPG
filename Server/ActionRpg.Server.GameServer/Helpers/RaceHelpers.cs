@@ -7,7 +7,7 @@ namespace ActionRpg.Server.GameServer.Helpers
     {
         public static IRace? GetRaceFromInt(int raceSelection)
         {
-            if(raceSelection > Enum.GetValues(typeof(Race)).Length)
+            if (raceSelection > Enum.GetValues(typeof(Race)).Length)
             {
                 return null;
             }
@@ -34,7 +34,7 @@ namespace ActionRpg.Server.GameServer.Helpers
                 throw new ArgumentOutOfRangeException(nameof(races));
             }
             var race = races[GeneralHelpers.GetRandBetweenTwoNumbers(0, races.Length - 1)];
-            if(race == null)
+            if (race == null)
             {
                 throw new ArgumentOutOfRangeException(nameof(race));
             }

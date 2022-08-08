@@ -10,6 +10,8 @@ namespace ActionRpg.Core.TestGameClient
     {
         static async Task Main(string[] args)
         {
+            GameManager.Initialize();
+
             Console.WriteLine("Calling Ping");
             var pingOutput = await StateManager.GrpcClient.PingServer();
             Console.WriteLine($"Ping Timestamp: {pingOutput.Timestamp}");

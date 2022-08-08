@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace ActionRpg.Server.GameServer.Helpers
+﻿namespace ActionRpg.Server.GameServer.Helpers
 {
     public static class GeneralHelpers
     {
@@ -13,7 +11,7 @@ namespace ActionRpg.Server.GameServer.Helpers
 
         public static T?[] GetAll<T>()
         {
-            return AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => 
+            return AppDomain.CurrentDomain.GetAssemblies().SelectMany(x =>
             x.GetTypes()
             .Where(type => typeof(T).IsAssignableFrom(type))
             .Where(type =>
