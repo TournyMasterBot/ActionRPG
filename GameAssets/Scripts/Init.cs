@@ -1,6 +1,5 @@
 using Assets.Scripts.Managers;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Init : MonoBehaviour
@@ -9,9 +8,17 @@ public class Init : MonoBehaviour
     void Start()
     {
         GameManager.Initialize();
-        var pingOutput = StateManager.GrpcClient.PingServer();
-        pingOutput.Wait();
-        Debug.Log($"Ping Output: {pingOutput.Result.Timestamp}");       
+        StateManager.GrpcClient.PingServer().ContinueWith((output) =>
+        {
+            try
+            {
+                Debug.Log($"Ping Output: {output.Result.Timestamp}");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogException(ex);
+            }
+        });
     }
 
     // Update is called once per frame
