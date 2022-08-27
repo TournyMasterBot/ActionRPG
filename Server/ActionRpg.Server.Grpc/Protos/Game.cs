@@ -26,7 +26,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
           string.Concat(
             "CgpnYW1lLnByb3RvEh5vbW5pYm90LmFjdGlvbnJwZy5nYW1lLmludGVyb3Aa",
             "DWNvbm5lY3QucHJvdG8aEGRpc2Nvbm5lY3QucHJvdG8aCnBpbmcucHJvdG8a",
-            "GnJlcG9ydF9wbGF5ZXJfc3RhdHVzLnByb3RvGgpjaGF0LnByb3RvGglnZW4u",
+            "CmNoYXQucHJvdG8aGnJlcG9ydF9wbGF5ZXJfc3RhdHVzLnByb3RvGglnZW4u",
             "cHJvdG8aCnpvbmUucHJvdG8aDHJlZ2lvbi5wcm90bxoQbG9jYWxfYXJlYS5w",
             "cm90bzLrCAoNQWN0aW9uUnBnR2FtZRJmCgdDb25uZWN0Eiwub21uaWJvdC5h",
             "Y3Rpb25ycGcuZ2FtZS5pbnRlcm9wLkNvbm5lY3RJbnB1dBotLm9tbmlib3Qu",
@@ -56,7 +56,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
             "YUNoYW5nZU91dHB1dEIiqgIfT21uaUJvdC5BY3Rpb25ScGcuR2FtZS5SZXF1",
             "ZXN0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::OmniBot.ActionRpg.Game.Requests.ConnectReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.DisconnectReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.PingReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ReportPlayerStatusReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ChatReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.GenReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ZoneReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.RegionReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.LocalAreaReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::OmniBot.ActionRpg.Game.Requests.ConnectReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.DisconnectReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.PingReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ChatReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ReportPlayerStatusReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.GenReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.ZoneReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.RegionReflection.Descriptor, global::OmniBot.ActionRpg.Game.Requests.LocalAreaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null));
     }
     #endregion

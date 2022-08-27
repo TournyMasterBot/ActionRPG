@@ -4,25 +4,22 @@ package omnibot.actionrpg.game.interop;
 
 option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
 
-// These imports rerference the sub folders. When generating protos,
-// it consolidates all proto locations into a single input/output folder format
+// Server Imports
+import "ServerProtos/connect.proto";
+import "ServerProtos/disconnect.proto";
+import "ServerProtos/ping.proto";
+import "ServerProtos/chat.proto";
 
-// ServerProtos/
-import "connect.proto";
-import "disconnect.proto";
-import "ping.proto";
-import "chat.proto";
+// Game Imports
+import "GameProtos/report_player_status.proto";
 
-// GameProtos/
-import "report_player_status.proto";
+// Generator Imports
+import "GeneratorProtos/gen.proto";
 
-// GeneratorProtos/
-import "gen.proto";
-
-// NavigationProtos/
-import "zone.proto";
-import "region.proto";
-import "local_area.proto";
+// Navigation imports
+import "NavigationProtos/zone.proto";
+import "NavigationProtos/region.proto";
+import "NavigationProtos/local_area.proto";
 
 
 service ActionRpgGame {
