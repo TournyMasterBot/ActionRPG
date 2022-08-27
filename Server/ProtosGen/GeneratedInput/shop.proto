@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package omnibot.actionrpg.game.interop;
+
+option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
+
+message GetShopItemsRequest {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+}
+
+message GetShopItemsResponse {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+    string payload = 4;             // Response data
+}
+
+message BuyItemRequest {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+    string item_id = 4;             // Item ID
+}
+
+message BuyItemResponse {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+    string item_id = 4;             // Item ID
+    string payload = 5;             // Response Data
+}
+
+message SellItemRequest {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+    string item_id = 4;             // Item ID
+}
+
+message SellItemResponse {
+    string message_id = 1;          // Unique identifier for message
+    string timestamp = 2;           // Timestamp of message
+    string shop_id = 3;             // Shop ID
+    string item_id = 4;             // Item ID
+    string payload = 5;             // Response Data
+}

@@ -10,6 +10,27 @@
             Game = 3,
         }
 
+        public enum ZoneType
+        {
+            Unknown = 0,
+            Overworld = 1,
+            Instance = 2,
+        }
+
+        public enum RegionType
+        {
+            Unknown = 0,
+            Wilderness = 1,
+            Kingdom = 2,
+            Town = 3,
+        }
+
+        public enum RoomType
+        {
+            Unknown = 0,
+            Shop = 1,
+        }
+
         public enum Race
         {
             Unknown = 0,
