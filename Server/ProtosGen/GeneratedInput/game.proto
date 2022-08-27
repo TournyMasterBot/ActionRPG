@@ -15,6 +15,7 @@ import "chat.proto";
 
 // GameProtos/
 import "report_player_status.proto";
+import "shop.proto";
 
 // GeneratorProtos/
 import "gen.proto";
