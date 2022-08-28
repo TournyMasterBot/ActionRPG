@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Server.Grpc", "Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Core.Test", "Core\ActionRpg.Test\ActionRpg.Core.Test.csproj", "{B950CB20-6874-4B39-8F7A-5728E96B1035}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionRpg.Client.GameClient", "Client\ActionRpg.Client.GameClient\ActionRpg.Client.GameClient.csproj", "{63169C67-8D96-428E-AF07-FB2408C846FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B950CB20-6874-4B39-8F7A-5728E96B1035}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B950CB20-6874-4B39-8F7A-5728E96B1035}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B950CB20-6874-4B39-8F7A-5728E96B1035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63169C67-8D96-428E-AF07-FB2408C846FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63169C67-8D96-428E-AF07-FB2408C846FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63169C67-8D96-428E-AF07-FB2408C846FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63169C67-8D96-428E-AF07-FB2408C846FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
