@@ -1,5 +1,10 @@
 ﻿namespace ActionRpg.Models
 {
+    /// <summary>
+    /// This file should be kept syncronized with ActionRpg.Client.GameClient.GameModels.GameClientConstants
+    /// This file is the source of truth.
+    /// Todo : Figure out the best way to sync between files
+    /// </summary>
     public static class GameConstants
     {
         public enum SceneType

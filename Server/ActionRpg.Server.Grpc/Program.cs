@@ -1,3 +1,4 @@
+using ActionRpg.Server.GameServer.Managers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -9,6 +10,7 @@ namespace ActionRpg.Server.Grpc
         public static void Main(string[] args)
         {
             AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler;
+            ApplicationState.Init("beta"); // Todo : Support args to switch beta/prod
             CreateHostBuilder(args).Build().Run();
         }
 
