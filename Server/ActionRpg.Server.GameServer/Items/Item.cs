@@ -1,5 +1,5 @@
 ﻿using ActionRpg.Models.Interfaces;
-using ActionRpg.Models.ShopModels;
+using ActionRpg.Models.ItemModels;
 
 namespace ActionRpg.Server.GameServer.Items
 {

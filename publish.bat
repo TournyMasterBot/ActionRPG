@@ -1,4 +1,3 @@
-echo ## Executing Build Script
-call build.bat
+rem Execute Publish Script
 echo ## Executing Publish Script
 dotnet publish -c Release

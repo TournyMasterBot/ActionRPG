@@ -15,6 +15,7 @@
         public ApplicationManager(string projectName)
         {
             LogManager.Initialize(projectName);
+            ApplicationState.Init("beta"); // Todo : Support args to switch beta/prod
         }
     }
 }

@@ -19,4 +19,10 @@
     <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="GameData\Items\items.HealthPotion.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

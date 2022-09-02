@@ -1,4 +1,4 @@
-﻿using ActionRpg.Models.ShopModels;
+﻿using ActionRpg.Models.ItemModels;
 
 namespace ActionRpg.Models.Interfaces
 {

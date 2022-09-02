@@ -1,0 +1,18 @@
+{
+  "id": "f2e684ec-d051-46bd-afb9-aba260691e79",
+  "version": "0",
+  "load_data_type": 1,
+  "created_at": "2022-09-02 00:00:00",
+  "updated_at": "2022-09-02 00:00:00",
+  "name": "Health Potion",
+  "model_name": "",
+  "description": "A simple health potion.",
+  "consumable_type": 1,
+  "equip_location": 0,
+  "modifiers": [
+    {
+      "source": "inherent",
+      "health_absolute": 10
+    }
+  ]
+}
