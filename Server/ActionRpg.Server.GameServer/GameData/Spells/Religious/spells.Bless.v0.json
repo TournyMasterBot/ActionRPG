@@ -1,0 +1,11 @@
+﻿{
+  "id": "6697dd91-a349-402e-88ba-e61778938b7c",
+  "version": 0,
+  "load_data_type": 5,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Bless",
+  "model_name": "spells/Bless",
+  "description": "A basic blessing of the gods",
+  "spell_type": "religion"
+}

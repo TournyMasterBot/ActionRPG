@@ -1,0 +1,14 @@
+﻿{
+  "id": "17d7713f-1abf-4a1f-aee0-5a7420a341e3",
+  "version": 0,
+  "load_data_type": 6,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Celestial",
+  "model_name": "race/Celestial",
+  "description": "A celestial",
+  "available_deity": [],
+  "available_classes": [],
+  "available_specializations": [],
+  "modifiers": []
+}

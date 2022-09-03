@@ -12,6 +12,29 @@
 
   <ItemGroup>
     <Folder Include="Extensions\CharacterExtensions\" />
+    <Folder Include="GameData\Equipment\Armor\Cuisses\" />
+    <Folder Include="GameData\Equipment\Armor\Belts\" />
+    <Folder Include="GameData\Equipment\Armor\Earrings\" />
+    <Folder Include="GameData\Equipment\Armor\Gauntlets\" />
+    <Folder Include="GameData\Equipment\Armor\Greaves\" />
+    <Folder Include="GameData\Equipment\Armor\Gorgets\" />
+    <Folder Include="GameData\Equipment\Armor\Gloves\" />
+    <Folder Include="GameData\Equipment\Armor\Tassets\" />
+    <Folder Include="GameData\Equipment\Armor\Rerebraces\" />
+    <Folder Include="GameData\Equipment\Armor\Scabbards\" />
+    <Folder Include="GameData\Equipment\Armor\Sabatons\" />
+    <Folder Include="GameData\Equipment\Armor\Vambraces\" />
+    <Folder Include="GameData\Equipment\Armor\Rings\" />
+    <Folder Include="GameData\Equipment\Armor\Shoes\" />
+    <Folder Include="GameData\Equipment\Armor\Shirts\" />
+    <Folder Include="GameData\Equipment\Armor\Pauldrons\" />
+    <Folder Include="GameData\Equipment\Weapons\Axes\" />
+    <Folder Include="GameData\Equipment\Weapons\Bows\" />
+    <Folder Include="GameData\Equipment\Weapons\Shields\" />
+    <Folder Include="GameData\Monsters\" />
+    <Folder Include="GameData\Skills\" />
+    <Folder Include="GameData\Spells\Elemental\" />
+    <Folder Include="GameData\Spells\Arcane\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +43,52 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="GameData\Classes\classes.Bard.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Classes\classes.Cleric.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Classes\classes.Mage.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Classes\classes.Thief.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Classes\classes.Warrior.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Equipment\Armor\Cuirasses\armor.PhoenixPlate.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Equipment\Armor\Helms\armor.PhoenixHelm.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Equipment\Weapons\Swords\weapons.PhoenixSword.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="GameData\Items\items.HealthPotion.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Npcs\npcs.Chronicler.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Races\races.Angel.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Races\races.Celestial.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Races\races.Demon.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Races\races.Human.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Specializations\specializations.Historian.v0.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameData\Spells\Religious\spells.Bless.v0.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

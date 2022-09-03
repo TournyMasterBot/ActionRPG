@@ -1,0 +1,14 @@
+﻿{
+  "id": "591ba09d-d319-4a77-9111-197dfe7fe0c2",
+  "version": 0,
+  "load_data_type": 7,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Mage",
+  "model_name": "class/Mage",
+  "description": "A mage",
+  "available_races": [],
+  "available_skills": [],
+  "available_spells": [],
+  "modifiers": []
+}

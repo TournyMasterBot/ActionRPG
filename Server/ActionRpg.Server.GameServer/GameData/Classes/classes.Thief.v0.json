@@ -1,0 +1,14 @@
+﻿{
+  "id": "c6deb9a4-9ced-4ecd-a495-3033a1593066",
+  "version": 0,
+  "load_data_type": 7,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Thief",
+  "model_name": "class/Thief",
+  "description": "A thief",
+  "available_races": [],
+  "available_skills": [],
+  "available_spells": [],
+  "modifiers": []
+}

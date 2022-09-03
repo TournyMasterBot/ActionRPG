@@ -1,0 +1,14 @@
+﻿{
+  "id": "4a9e5782-22bf-4e34-98ec-4ae88d0dd232",
+  "version": 0,
+  "load_data_type": 6,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Human",
+  "model_name": "race/Human",
+  "description": "A standard human",
+  "available_deity": [],
+  "available_classes": [],
+  "available_specializations": [],
+  "modifiers": []
+}

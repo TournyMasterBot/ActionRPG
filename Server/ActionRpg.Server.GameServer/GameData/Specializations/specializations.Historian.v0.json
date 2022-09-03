@@ -1,0 +1,11 @@
+﻿{
+  "id": "0d14868a-dded-4f58-9cd7-bf5079397f3a",
+  "version": 0,
+  "load_data_type": 8,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Historian",
+  "description": "A historian specializes in the history of the world",
+  "requirements": [],
+  "modifiers": []
+}
