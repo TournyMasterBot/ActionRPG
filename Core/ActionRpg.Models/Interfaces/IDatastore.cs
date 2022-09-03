@@ -36,7 +36,7 @@ namespace ActionRpg.Models.Interfaces
         /// <summary>
         /// Creates specified tables with fields and indexes
         /// </summary>
-        public bool CreateTable(CreateTableInput input);
+        public bool? CreateTable(CreateTableInput input);
         /// <summary>
         /// Saves object serialized to the datastore
         /// </summary>

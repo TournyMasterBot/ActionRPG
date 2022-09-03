@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using static ActionRpg.Models.GameConstants;
 
 namespace ActionRpg.Models.ItemModels
@@ -9,6 +10,7 @@ namespace ActionRpg.Models.ItemModels
         /// GUID of object. Arbitrary.
         /// </summary>
         [JsonProperty(PropertyName = "id")]
+        [MinLength(36), MaxLength(36)]
         public string ItemID { get; set; }
         /// <summary>
         /// Version ID, this tracks iterations of the same item. 
@@ -16,6 +18,7 @@ namespace ActionRpg.Models.ItemModels
         /// but this version identifier helps track changes for caching purposes
         /// </summary>
         [JsonProperty(PropertyName = "version")]
+        [MinLength(1)]
         public string Version { get; set; }
         /// <summary>
         /// Type of data being loaded
@@ -36,16 +39,19 @@ namespace ActionRpg.Models.ItemModels
         /// Item name that should be displayed to players
         /// </summary>
         [JsonProperty(PropertyName = "name")]
+        [MinLength(3), MaxLength(100)]
         public string ItemName { get; set; }
         /// <summary>
         /// Model name that needs to be loaded to display item in world
         /// </summary>
         [JsonProperty(PropertyName = "model_name")]
+        [MinLength(0), MaxLength(255)]
         public string ModelName { get; set; }
         /// <summary>
         /// Item description shown to players
         /// </summary>
         [JsonProperty(PropertyName = "description")]
+        [MinLength(0), MaxLength(500)]
         public string ItemDescription { get; set; }
         /// <summary>
         /// Defines whether or not the player can consume the item
@@ -53,14 +59,14 @@ namespace ActionRpg.Models.ItemModels
         /// '0' means the item is not consumable.
         /// </summary>
         [JsonProperty(PropertyName = "consumable_type")]
-        public bool ConsumableType { get; set; }
+        public ConsumableType ConsumableType { get; set; }
         /// <summary>
         /// Defines whether or not the player can equip the item, 
         /// and what item slot the item is equipped to.
         /// '0' means the item is not equipable.
         /// </summary>
         [JsonProperty(PropertyName = "equip_location")]
-        public bool EquipLocation { get; set; }
+        public EquipLocation EquipLocation { get; set; }
         /// <summary>
         /// Defines what item modifiers are applied when the item is used
         /// </summary>
