@@ -56,11 +56,11 @@ namespace ActionRpg.Models.Interfaces
         /// <summary>
         /// Gets an item from the datastore
         /// </summary>
-        public T GetFromDatastore<T>(TableGetInput input);
+        public Task<T?> GetFromDatastore<T>(TableGetInput input);
         /// <summary>
         /// Gets a list of items from the datastore
         /// </summary>
-        public T[] GetListFromDatastore<T>(TableGetInput[] input);
+        public Task<T[]> GetListFromDatastore<T>(TableGetInput[] input);
         /// <summary>
         /// Deletes an item from the datastore
         /// </summary>
@@ -75,5 +75,9 @@ namespace ActionRpg.Models.Interfaces
         /// Value: JSON payload for that table
         /// </summary>
         public bool? ImportDataToDatastore(Dictionary<string, string[]> dataMap);
+        /// <summary>
+        /// Close / dispose of any resources
+        /// </summary>
+        public void Cleanup();
     }
 }

@@ -1,5 +1,7 @@
-﻿using ActionRpg.Models.Interfaces;
+﻿using ActionRpg.Models.DatastoreCoreModels;
+using ActionRpg.Models.Interfaces;
 using ActionRpg.Models.ItemModels;
+using ActionRpg.Server.GameServer.Managers;
 
 namespace ActionRpg.Server.GameServer.Items
 {
@@ -28,9 +30,14 @@ namespace ActionRpg.Server.GameServer.Items
             throw new NotImplementedException();
         }
 
-        public Item GetItem(string itemID)
+        public async Task<Item?> GetItem(string itemID)
         {
-            throw new NotImplementedException();
+            var item = await ApplicationState.App.Datastore.GetFromDatastore<Item>(new TableGetInput()
+            {
+                TableName = "items",
+                Key = itemID,
+            });
+            return item;
         }
 
         public Item[] GetItems(string[] itemID)

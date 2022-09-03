@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package omnibot.actionrpg.game.interop;
+
+option csharp_namespace = "OmniBot.ActionRpg.Game.Requests";
+
+message GetItemRequest {
+    string message_id = 1;
+    string timestamp = 2;
+    string item_id = 3;
+}
+
+message GetItemResponse {
+    string message_id = 1;
+	string timestamp = 2;
+	string response_to_message_id = 3;
+    string payload = 4;
+}

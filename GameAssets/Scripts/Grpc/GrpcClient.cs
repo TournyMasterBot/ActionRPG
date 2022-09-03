@@ -2,6 +2,7 @@
 using OmniBot.ActionRpg.Game.Requests;
 using System;
 using System.Threading.Tasks;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 
 namespace Assets.Scripts.Grpc
 {
@@ -35,6 +36,17 @@ namespace Assets.Scripts.Grpc
             var output = await client.PingAsync(new PingInput()
             {
                 Timestamp = DateTime.UtcNow.ToString(Constants.TimeFormat),
+            });
+            return output;
+        }
+
+        public async Task<GetItemResponse> GetItem(string itemID)
+        {
+            var output = await client.GetItemAsync(new GetItemRequest()
+            {
+                MessageId = Utils.CreateIdentifier(),
+                Timestamp = DateTime.UtcNow.ToString(Constants.TimeFormat),
+                ItemId = itemID,
             });
             return output;
         }

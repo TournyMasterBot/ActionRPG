@@ -170,13 +170,30 @@ namespace ActionRpg.Models.DatastoreModels
             }
         }
 
-        public T GetFromDatastore<T>(TableGetInput input)
+        public async Task<T?> GetFromDatastore<T>(TableGetInput input)
         {
-            throw new NotImplementedException();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = $"select data from {input.TableName} where key = @key";
+                command.Parameters.AddWithValue("@key", input.Key);
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            var item = JsonConvert.DeserializeObject<T>((string)reader[0]);
+                            return item;
+                        }
+                    }
+                    return default(T);
+                }
+            }
         }
 
-        public T[] GetListFromDatastore<T>(TableGetInput[] input)
+        public async Task<T[]> GetListFromDatastore<T>(TableGetInput[] input)
         {
+            await Task.FromResult(0);
             throw new NotImplementedException();
         }
 
@@ -261,6 +278,25 @@ namespace ActionRpg.Models.DatastoreModels
                 }                
             }
             return true;
+        }
+
+        public void Cleanup()
+        {
+            if(conn != null)
+            {
+                if(conn.State != ConnectionState.Closed)
+                {
+                    try
+                    {
+                        conn.Close();
+                    }
+                    catch(Exception ex)
+                    {
+                        log.Error(ex, "Cleanup.Close");
+                    }
+                }
+                conn.Dispose();
+            }
         }
     }
 }
