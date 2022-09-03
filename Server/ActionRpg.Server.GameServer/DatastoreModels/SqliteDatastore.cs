@@ -1,8 +1,10 @@
 ﻿using ActionRpg.Core.Helpers;
 using ActionRpg.Models.DatastoreCoreModels;
 using ActionRpg.Models.Interfaces;
+using Newtonsoft.Json;
 using System.Data;
 using System.Data.SQLite;
+using System.Text;
 using static ActionRpg.Models.ServerConstants;
 
 namespace ActionRpg.Models.DatastoreModels
@@ -77,9 +79,70 @@ namespace ActionRpg.Models.DatastoreModels
             throw new NotImplementedException();
         }
 
-        public bool CreateTable(CreateTableInput input)
+        public bool? CreateTable(CreateTableInput input)
         {
-            throw new NotImplementedException();
+            if(input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+            if(input.Fields.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(input.Fields));
+            }
+            try
+            {
+                var fieldBuilder = new StringBuilder();
+                foreach(var field in input.Fields)
+                {
+                    var primaryKey = field.IsPrimaryKey ? "PRIMARY KEY" : "";
+                    var isNullable = field.IsNullable || field.IsPrimaryKey ? "" : "NOT NULL";
+                    fieldBuilder.AppendLine($",{field.FieldName} {fieldTypeSelector(field.FieldType)} {primaryKey}{isNullable}");
+                }
+                var queryBuilder = new StringBuilder();
+                queryBuilder.AppendLine($"create table if not exists {input.TableName} (");
+                queryBuilder.AppendLine($"{fieldBuilder.ToString().Substring(1)}");
+                queryBuilder.AppendLine(") without rowid;");
+                using (var command = conn.CreateCommand())
+                {
+                    command.CommandText = queryBuilder.ToString();
+                    command.ExecuteNonQuery();
+                    foreach(var index in input.TableIndexes)
+                    {
+                        var indexType = index.IndexType == TableIndexType.Unique ? "UNIQUE" : "";
+                        command.CommandText = $"create {indexType} index if not exists {index.IndexName} on {input.TableName}({string.Join(",", index.Fields)});";
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                log.Error(ex, "CreateTable");
+                return false;
+            }
+            return true;
+        }
+
+        private string fieldTypeSelector(string type)
+        {
+            switch (type)
+            {
+                case "string":
+                {
+                    return "TEXT";
+                }
+                case "text":
+                {
+                    return "TEXT";
+                }
+                case "blob":
+                {
+                    return "BLOB";
+                }
+                default:
+                {
+                    throw new NotImplementedException($"Unknown field type: {type}");
+                }
+            }
         }
 
         public bool DeleteFromDatastore(TableDeleteItemInput input)
@@ -117,9 +180,42 @@ namespace ActionRpg.Models.DatastoreModels
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// First pass hack job to save list to datastore. 
+        /// This is a non optimized single item insert script.
+        /// Enhancements should use bulk queries
+        /// </summary>
+        /// <returns>True: Successfully executed without exceptions, False: Exception was encountered during execution</returns>
         public bool SaveListToDatastore<T>(SaveItemInput<T>[] input)
         {
-            throw new NotImplementedException();
+            var success = true;
+            using(var command = conn.CreateCommand())
+            {
+                foreach(var item in input)
+                {
+                    try
+                    {
+                        command.CommandText = @$"
+                            update {item.TableName} set data = @data where key = @key;
+                            insert into {item.TableName} (key, data) 
+                            select @key, @data 
+                            where not exists (
+                                select 1 from {item.TableName} 
+                                where key = @key
+                            );";
+                        command.Parameters.Clear();
+                        command.Parameters.AddWithValue("@key", item.Key);
+                        command.Parameters.AddWithValue("@data", JsonConvert.SerializeObject(item.Value));
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        log.Error(ex, "SaveListToDatastore");
+                        success = false;
+                    }
+                }
+            }
+            return success;
         }
 
         public bool SaveToDatastore<T>(SaveItemInput<T> input)

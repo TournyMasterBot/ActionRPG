@@ -5,7 +5,7 @@
   "created_at": "2022-09-02 00:00:00",
   "updated_at": "2022-09-02 00:00:00",
   "name": "Health Potion",
-  "model_name": "",
+  "model_name": "items/HealthPotion",
   "description": "A simple health potion.",
   "consumable_type": 1,
   "equip_location": 0,

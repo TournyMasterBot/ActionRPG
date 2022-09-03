@@ -4,6 +4,6 @@
     {
         public string IndexName { get; set; }
         public ServerConstants.TableIndexType IndexType { get; set; }
-        public TableFieldInput[] Fields { get; set; }
+        public string[] Fields { get; set; }
     }
 }
