@@ -36,6 +36,41 @@
             Shop = 1,
         }
 
+        public enum LoadDataType
+        {
+            Unknown = 0,
+            Item = 1,
+            Equipment = 2,
+        }
+
+        public enum ConsumableType
+        {
+            Unknown = 0,
+            Potion = 1,
+            Food = 2,
+            Drink = 3,
+        }
+
+        public enum EquipLocation
+        {
+            Unknown = 0,
+            Head = 1,
+            Pauldron = 2,
+            Cuirass = 3,
+            Arms = 4,
+            Legs = 5,
+            Feet = 6,
+            Belt = 7,
+            Earring = 8,
+            Ring = 9,
+            Gauntlet = 10,
+            Greave = 11,
+            Vambrace = 12,
+            Gorget = 13,
+            Sabaton = 14,
+            Scabbard = 15,
+        }
+
         public enum Race
         {
             Unknown = 0,
