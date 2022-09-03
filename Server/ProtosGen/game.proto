@@ -15,7 +15,8 @@ import "chat.proto";
 
 // GameProtos/
 import "report_player_status.proto";
-import "shop.proto";
+//Todo : import "shop.proto";
+import "item.proto";
 
 // GeneratorProtos/
 import "gen.proto";
@@ -38,6 +39,7 @@ service ActionRpgGame {
 	rpc ReportPlayerStatus(ReportPlayerStatusInput) returns(ReportPlayerStatusOutput);
 	rpc SendChatMessage(SendChatInput) returns(SendChatOutput);
 	rpc GenerateCharacter(GenerateCharacterInput) returns(GenerateCharacterOutput);
+	rpc GetItem(GetItemRequest) returns (GetItemResponse);
 
 	//***********
 	// Navigation

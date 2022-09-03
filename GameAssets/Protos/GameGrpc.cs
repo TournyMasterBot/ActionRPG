@@ -24,6 +24,8 @@ namespace OmniBot.ActionRpg.Game.Requests {
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.SendChatOutput> __Marshaller_omnibot_actionrpg_game_interop_SendChatOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.SendChatOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput> __Marshaller_omnibot_actionrpg_game_interop_GenerateCharacterInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput> __Marshaller_omnibot_actionrpg_game_interop_GenerateCharacterOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.GetItemRequest> __Marshaller_omnibot_actionrpg_game_interop_GetItemRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.GetItemRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.GetItemResponse> __Marshaller_omnibot_actionrpg_game_interop_GetItemResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.GetItemResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeInput> __Marshaller_omnibot_actionrpg_game_interop_ReportZoneChangeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeOutput> __Marshaller_omnibot_actionrpg_game_interop_ReportZoneChangeOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::OmniBot.ActionRpg.Game.Requests.ReportRegionChangeInput> __Marshaller_omnibot_actionrpg_game_interop_ReportRegionChangeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::OmniBot.ActionRpg.Game.Requests.ReportRegionChangeInput.Parser.ParseFrom);
@@ -72,6 +74,13 @@ namespace OmniBot.ActionRpg.Game.Requests {
         "GenerateCharacter",
         __Marshaller_omnibot_actionrpg_game_interop_GenerateCharacterInput,
         __Marshaller_omnibot_actionrpg_game_interop_GenerateCharacterOutput);
+
+    static readonly grpc::Method<global::OmniBot.ActionRpg.Game.Requests.GetItemRequest, global::OmniBot.ActionRpg.Game.Requests.GetItemResponse> __Method_GetItem = new grpc::Method<global::OmniBot.ActionRpg.Game.Requests.GetItemRequest, global::OmniBot.ActionRpg.Game.Requests.GetItemResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetItem",
+        __Marshaller_omnibot_actionrpg_game_interop_GetItemRequest,
+        __Marshaller_omnibot_actionrpg_game_interop_GetItemResponse);
 
     static readonly grpc::Method<global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeInput, global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeOutput> __Method_ReportZoneChange = new grpc::Method<global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeInput, global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeOutput>(
         grpc::MethodType.Unary,
@@ -144,6 +153,11 @@ namespace OmniBot.ActionRpg.Game.Requests {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput> GenerateCharacter(global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::OmniBot.ActionRpg.Game.Requests.GetItemResponse> GetItem(global::OmniBot.ActionRpg.Game.Requests.GetItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -355,6 +369,22 @@ namespace OmniBot.ActionRpg.Game.Requests {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateCharacter, null, options, request);
       }
+      public virtual global::OmniBot.ActionRpg.Game.Requests.GetItemResponse GetItem(global::OmniBot.ActionRpg.Game.Requests.GetItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::OmniBot.ActionRpg.Game.Requests.GetItemResponse GetItem(global::OmniBot.ActionRpg.Game.Requests.GetItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetItem, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::OmniBot.ActionRpg.Game.Requests.GetItemResponse> GetItemAsync(global::OmniBot.ActionRpg.Game.Requests.GetItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::OmniBot.ActionRpg.Game.Requests.GetItemResponse> GetItemAsync(global::OmniBot.ActionRpg.Game.Requests.GetItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetItem, null, options, request);
+      }
       /// <summary>
       ///***********
       /// Navigation
@@ -453,6 +483,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
           .AddMethod(__Method_ReportPlayerStatus, serviceImpl.ReportPlayerStatus)
           .AddMethod(__Method_SendChatMessage, serviceImpl.SendChatMessage)
           .AddMethod(__Method_GenerateCharacter, serviceImpl.GenerateCharacter)
+          .AddMethod(__Method_GetItem, serviceImpl.GetItem)
           .AddMethod(__Method_ReportZoneChange, serviceImpl.ReportZoneChange)
           .AddMethod(__Method_ReportRegionChange, serviceImpl.ReportRegionChange)
           .AddMethod(__Method_ReportLocalAreaChange, serviceImpl.ReportLocalAreaChange).Build();
@@ -470,6 +501,7 @@ namespace OmniBot.ActionRpg.Game.Requests {
       serviceBinder.AddMethod(__Method_ReportPlayerStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.ReportPlayerStatusInput, global::OmniBot.ActionRpg.Game.Requests.ReportPlayerStatusOutput>(serviceImpl.ReportPlayerStatus));
       serviceBinder.AddMethod(__Method_SendChatMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.SendChatInput, global::OmniBot.ActionRpg.Game.Requests.SendChatOutput>(serviceImpl.SendChatMessage));
       serviceBinder.AddMethod(__Method_GenerateCharacter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterInput, global::OmniBot.ActionRpg.Game.Requests.GenerateCharacterOutput>(serviceImpl.GenerateCharacter));
+      serviceBinder.AddMethod(__Method_GetItem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.GetItemRequest, global::OmniBot.ActionRpg.Game.Requests.GetItemResponse>(serviceImpl.GetItem));
       serviceBinder.AddMethod(__Method_ReportZoneChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeInput, global::OmniBot.ActionRpg.Game.Requests.ReportZoneChangeOutput>(serviceImpl.ReportZoneChange));
       serviceBinder.AddMethod(__Method_ReportRegionChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.ReportRegionChangeInput, global::OmniBot.ActionRpg.Game.Requests.ReportRegionChangeOutput>(serviceImpl.ReportRegionChange));
       serviceBinder.AddMethod(__Method_ReportLocalAreaChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OmniBot.ActionRpg.Game.Requests.ReportLocalAreaChangeInput, global::OmniBot.ActionRpg.Game.Requests.ReportLocalAreaChangeOutput>(serviceImpl.ReportLocalAreaChange));

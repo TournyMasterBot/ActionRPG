@@ -18,15 +18,17 @@ namespace ActionRpg.Server.Grpc
 
         public static void Main(string[] args)
         {
-            AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler;
-            ApplicationState.Init("beta"); // Todo : Support args to switch beta/prod
-            log = new LoggingHelpers("Program");
-            // Todo : Move datastore creation to relevant datastore area
-            ApplicationState.App.Datastore.CreateTable(new CreateTableInput()
+            try
             {
-                TableName = "items",
-                Fields = new TableFieldInput[2]
+                AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler;
+                ApplicationState.Init("beta"); // Todo : Support args to switch beta/prod
+                log = new LoggingHelpers("Program");
+                // Todo : Move datastore creation to relevant datastore area
+                ApplicationState.App.Datastore.CreateTable(new CreateTableInput()
                 {
+                    TableName = "items",
+                    Fields = new TableFieldInput[2]
+                    {
                     new TableFieldInput()
                     {
                         FieldName = "key",
@@ -41,50 +43,55 @@ namespace ActionRpg.Server.Grpc
                         FieldType = "text",
                         IsNullable = false,
                     }
-                },
-                TableIndexes = new TableIndexInput[1]
-                {
+                    },
+                    TableIndexes = new TableIndexInput[1]
+                    {
                     new TableIndexInput()
                     {
                         IndexName = "uix_items_key",
                         IndexType = Models.ServerConstants.TableIndexType.Unique,
                         Fields = new string[1] { "key" }
                     }
-                }
-            });
-            var gameDataFiles = GameDataLoader.LoadFileList(Path.GetFullPath($"{ApplicationState.App.Config.ApplicationBasePath}/GameData")); // Todo : Add flag args to enable / disable loading data during server start
-            var gameDataMap = GameDataLoader.LoadData(gameDataFiles);
-            var gameItems = new List<Item>(); // Todo : Handle game data map loading elsewhere
-            foreach(var dataMap in gameDataMap)
-            {
-                switch (dataMap.Key)
-                {
-                    case "items":
-                    {
-                        foreach(var item in dataMap.Value)
-                        {
-                            gameItems.Add(item.JsonToGameItem());
-                        }
-                        break;
                     }
-                    default:
-                    {
-                        throw new NotImplementedException($"Unknown datamap key: {dataMap.Key}. Count: {dataMap.Value.Length}");
-                    }
-                }
-            }
-            var saveItemList = new List<SaveItemInput<Item>>(); // Todo: Move this to a more relevant area for datastore handling
-            foreach(var item in gameItems)
-            {
-                saveItemList.Add(new SaveItemInput<Item>()
-                {
-                    TableName = "items",
-                    Key = item.ItemID,
-                    Value = item
                 });
+                var gameDataFiles = GameDataLoader.LoadFileList(Path.GetFullPath($"{ApplicationState.App.Config.ApplicationBasePath}/GameData")); // Todo : Add flag args to enable / disable loading data during server start
+                var gameDataMap = GameDataLoader.LoadData(gameDataFiles);
+                var gameItems = new List<Item>(); // Todo : Handle game data map loading elsewhere
+                foreach (var dataMap in gameDataMap)
+                {
+                    switch (dataMap.Key)
+                    {
+                        case "items":
+                        {
+                            foreach (var item in dataMap.Value)
+                            {
+                                gameItems.Add(item.JsonToGameItem());
+                            }
+                            break;
+                        }
+                        default:
+                        {
+                            throw new NotImplementedException($"Unknown datamap key: {dataMap.Key}. Count: {dataMap.Value.Length}");
+                        }
+                    }
+                }
+                var saveItemList = new List<SaveItemInput<Item>>(); // Todo: Move this to a more relevant area for datastore handling
+                foreach (var item in gameItems)
+                {
+                    saveItemList.Add(new SaveItemInput<Item>()
+                    {
+                        TableName = "items",
+                        Key = item.ItemID,
+                        Value = item
+                    });
+                }
+                ApplicationState.App.Datastore.SaveListToDatastore<Item>(saveItemList.ToArray());
+                CreateHostBuilder(args).Build().Run();
             }
-            ApplicationState.App.Datastore.SaveListToDatastore<Item>(saveItemList.ToArray());
-            CreateHostBuilder(args).Build().Run();
+            finally
+            {
+                ApplicationState.App.Datastore.Cleanup();
+            }
         }
 
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)

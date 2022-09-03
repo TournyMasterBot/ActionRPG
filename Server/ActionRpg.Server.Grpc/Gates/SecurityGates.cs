@@ -7,6 +7,7 @@
         public ReportPlayerStatusSecurityGate ReportPlayerStatus { get; set; }
         public ReportZoneChangeSecurityGate ReportZoneChange { get; set; }
         public GenerateCharacterSecurityGate GenerateCharacter { get; set; }
+        public GetItemSecurityGate GetItem { get; set; }
 
         public SecurityGates()
         {
@@ -15,6 +16,7 @@
             ReportPlayerStatus = new ReportPlayerStatusSecurityGate();
             ReportZoneChange = new ReportZoneChangeSecurityGate();
             GenerateCharacter = new GenerateCharacterSecurityGate();
+            GetItem = new GetItemSecurityGate();
         }
     }
 }
