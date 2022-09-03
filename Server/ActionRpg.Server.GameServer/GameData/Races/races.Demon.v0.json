@@ -1,0 +1,14 @@
+﻿{
+  "id": "f77fe12c-26f6-442b-94eb-ebd48950ba10",
+  "version": 0,
+  "load_data_type": 6,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Demon",
+  "model_name": "race/Demon",
+  "description": "A demon",
+  "available_deity": [],
+  "available_classes": [],
+  "available_specializations": [],
+  "modifiers": []
+}

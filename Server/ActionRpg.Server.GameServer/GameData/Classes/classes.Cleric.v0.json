@@ -1,0 +1,14 @@
+﻿{
+  "id": "501c4bb9-090a-4451-8d7f-780892541b51",
+  "version": 0,
+  "load_data_type": 7,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Cleric",
+  "model_name": "class/Cleric",
+  "description": "A cleric",
+  "available_races": [],
+  "available_skills": [],
+  "available_spells": [],
+  "modifiers": []
+}

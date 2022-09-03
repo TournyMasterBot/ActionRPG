@@ -1,0 +1,17 @@
+﻿{
+  "id": "4d170fd1-8bc9-4deb-ba7b-2431cc8de3f6",
+  "version": 0,
+  "load_data_type": 2,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Phoenix Sword",
+  "model_name": "weapon/PhoenixSword",
+  "description": "A fiery sword",
+  "equip_location": 15,
+  "modifiers": [
+    {
+      "source": "inherent",
+      "damage": 100
+    }
+  ]
+}

@@ -34,6 +34,10 @@ namespace ActionRpg.Models.Interfaces
         /// </summary>
         public IDataReader ExecuteSql(string sql);
         /// <summary>
+        /// Creates a simple key : value table to store information
+        /// </summary>
+        public bool? CreateSimpleTable(string tableName);
+        /// <summary>
         /// Creates specified tables with fields and indexes
         /// </summary>
         public bool? CreateTable(CreateTableInput input);

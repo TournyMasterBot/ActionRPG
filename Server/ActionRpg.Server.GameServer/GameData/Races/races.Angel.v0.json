@@ -1,0 +1,14 @@
+﻿{
+  "id": "499f41ac-e19a-4a9c-89b7-26d136f7a6de",
+  "version": 0,
+  "load_data_type": 6,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Angel",
+  "model_name": "race/Angel",
+  "description": "An angel",
+  "available_deity": [],
+  "available_classes": [],
+  "available_specializations": [],
+  "modifiers": []
+}

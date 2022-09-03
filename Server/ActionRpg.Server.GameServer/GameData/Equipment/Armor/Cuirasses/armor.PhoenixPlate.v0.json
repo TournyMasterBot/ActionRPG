@@ -1,0 +1,17 @@
+﻿{
+  "id": "71208612-2ec8-4a65-8dd5-e505aadddd29",
+  "version": 0,
+  "load_data_type": 2,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Phoenix Plate",
+  "model_name": "armor/PhoenixPlate",
+  "description": "A fiery cuirass",
+  "equip_location": 1,
+  "modifiers": [
+    {
+      "source": "inherent",
+      "armor_class": 100
+    }
+  ]
+}

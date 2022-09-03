@@ -1,0 +1,14 @@
+﻿{
+  "id": "c5783e72-a3cf-4e27-b994-fe0a4a45934c",
+  "version": 0,
+  "load_data_type": 7,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Warrior",
+  "model_name": "class/Warrior",
+  "description": "A warrior",
+  "available_races": [],
+  "available_skills": [],
+  "available_spells": [],
+  "modifiers": []
+}

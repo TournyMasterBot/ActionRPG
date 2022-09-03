@@ -79,6 +79,28 @@ namespace ActionRpg.Models.DatastoreModels
             throw new NotImplementedException();
         }
 
+        public bool? CreateSimpleTable(string tableName)
+        {
+            if (string.IsNullOrWhiteSpace(tableName))
+            {
+                throw new ArgumentNullException(nameof(tableName));
+            }
+            try
+            {
+                using (var command = conn.CreateCommand())
+                {
+                    command.CommandText = $"create table if not exists {tableName} (key text primary key, data text) without rowid;";
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch(Exception ex)
+            {
+                log.Error(ex, "CreateSimpleTable");
+                return false;
+            }
+        }
+
         public bool? CreateTable(CreateTableInput input)
         {
             if(input == null)

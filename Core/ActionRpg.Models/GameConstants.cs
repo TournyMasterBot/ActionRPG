@@ -41,6 +41,12 @@
             Unknown = 0,
             Item = 1,
             Equipment = 2,
+            Monster = 3,
+            Npc = 4,
+            Spell = 5,
+            Race = 6,
+            Class = 7,
+            Specialization = 8,
         }
 
         public enum ConsumableType
@@ -54,21 +60,24 @@
         public enum EquipLocation
         {
             Unknown = 0,
-            Head = 1,
-            Pauldron = 2,
-            Cuirass = 3,
-            Arms = 4,
-            Legs = 5,
-            Feet = 6,
-            Belt = 7,
-            Earring = 8,
-            Ring = 9,
-            Gauntlet = 10,
-            Greave = 11,
-            Vambrace = 12,
-            Gorget = 13,
-            Sabaton = 14,
-            Scabbard = 15,
+            Helm = 1, // Helmet
+            Pauldron = 2, // Shoulder guards
+            Cuirass = 3, // Breast plate
+            Shirt = 4, // Under shirt
+            Cuisses = 5, // Top of legs
+            Shoes = 6, // Regular boots / shoes
+            Belt = 7, // It goes around the waist and keeps your pants up
+            Earring = 8, // It goes in the ear!
+            Ring = 9, // Finger earrings
+            Gauntlet = 10, // Hand armor
+            Greave = 11, // Lower leg armor
+            Vambrace = 12, // Lower arm armor
+            Gorget = 13, // Neck armor
+            Sabaton = 14, // Foot armor
+            Scabbard = 15, // Sword sheath
+            Glove = 16, // Hand warmers
+            Rerebrace = 17, // Bicep protector
+            Tasset = 18, // Belt & fancy drape top of legs from waist
         }
 
         public enum Race

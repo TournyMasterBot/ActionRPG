@@ -1,0 +1,14 @@
+﻿{
+  "id": "50207d25-3049-494b-84a3-7cadc39a035f",
+  "version": 0,
+  "load_data_type": 7,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Bard",
+  "model_name": "class/Bard",
+  "description": "A bard",
+  "available_races": [],
+  "available_skills": [],
+  "available_spells": [],
+  "modifiers": []
+}

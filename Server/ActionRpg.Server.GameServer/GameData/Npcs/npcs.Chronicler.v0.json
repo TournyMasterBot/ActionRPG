@@ -1,0 +1,40 @@
+﻿{
+  "id": "cb5276cd-2f2d-4fb5-bb90-b4650a66968d",
+  "version": 0,
+  "load_data_type": 4,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Keeper",
+  "model_name": "npcs/Chronicler",
+  "description": "The chronicler of time",
+  "race": "17d7713f-1abf-4a1f-aee0-5a7420a341e3",
+  "class": "50207d25-3049-494b-84a3-7cadc39a035f",
+  "specialization": "0d14868a-dded-4f58-9cd7-bf5079397f3a",
+  "equipment": [
+    {
+      "id": "1392755c-c7e8-43db-a635-6b62d2049143",
+      "slot": 1
+    },
+    {
+      "id": "71208612-2ec8-4a65-8dd5-e505aadddd29",
+      "slot": 3
+    },
+    {
+      "id": "4d170fd1-8bc9-4deb-ba7b-2431cc8de3f6",
+      "slot": 15
+    }
+  ],
+  "inventory": [
+    {
+      "item_id": "f2e684ec-d051-46bd-afb9-aba260691e79"
+    }
+  ],
+  "modifiers": [
+    {
+      "affect_type": "spell",
+      "affect_id": "6697dd91-a349-402e-88ba-e61778938b7c",
+      "is_permanent": true,
+      "affect_duration": 0
+    }
+  ]
+}

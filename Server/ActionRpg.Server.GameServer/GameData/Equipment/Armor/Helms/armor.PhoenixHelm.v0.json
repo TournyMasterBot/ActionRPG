@@ -1,0 +1,17 @@
+﻿{
+  "id": "1392755c-c7e8-43db-a635-6b62d2049143",
+  "version": 0,
+  "load_data_type": 2,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Phoenix Helm",
+  "model_name": "armor/PhoenixHelm",
+  "description": "A fiery helm",
+  "equip_location": 1,
+  "modifiers": [
+    {
+      "source": "inherent",
+      "armor_class": 100
+    }
+  ]
+}
