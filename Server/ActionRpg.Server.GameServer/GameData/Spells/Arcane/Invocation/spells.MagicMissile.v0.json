@@ -1,0 +1,18 @@
+﻿{
+  "id": "6697dd91-a349-402e-88ba-e61778938b7c",
+  "version": 0,
+  "load_data_type": 5,
+  "created_at": "2022-09-03 00:00:00",
+  "updated_at": "2022-09-03 00:00:00",
+  "name": "Magic Missile",
+  "model_name": "spells/MagicMissile",
+  "description": "A basic force spell",
+  "spell_category": "arcane",
+  "school": "invocation",
+  "range": "100",
+  "min_damage": 1,
+  "max_damage": 4,
+  "dice": 3,
+  "dice_delay": 500,
+  "spell_damage_type": 1
+}

@@ -127,5 +127,15 @@
             { Profession.Mage, 100 },
             { Profession.Cleric, 100 },
         };
+
+        public enum SpellDamageType
+        {
+            Unknown = 0,
+            Force = 1,
+            Fire = 2,
+            Wind = 3,
+            Water = 4,
+            Earth = 5,
+        }
     }
 }

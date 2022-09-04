@@ -1,0 +1,2 @@
+# Earth
+* Earth based spells

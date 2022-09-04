@@ -1,0 +1,2 @@
+# Wind
+* Wind based spells
