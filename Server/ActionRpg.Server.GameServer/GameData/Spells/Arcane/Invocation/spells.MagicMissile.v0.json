@@ -9,7 +9,7 @@
   "description": "A basic force spell",
   "spell_category": "arcane",
   "school": "invocation",
-  "range": "100",
+  "range": 100.0,
   "min_damage": 1,
   "max_damage": 4,
   "dice": 3,

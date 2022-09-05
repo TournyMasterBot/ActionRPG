@@ -9,6 +9,6 @@
   "description": "A basic blessing of the gods",
   "spell_category": "religion",
   "school": "worship",
-  "range": "10",
+  "range": 10.0,
   "modifiers": []
 }

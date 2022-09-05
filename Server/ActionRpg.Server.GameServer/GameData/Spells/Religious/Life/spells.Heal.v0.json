@@ -1,0 +1,14 @@
+﻿{
+  "id": "c91bb38b-287e-42d0-9f25-acda9f5cd457",
+  "version": 0,
+  "load_data_type": 5,
+  "created_at": "2022-09-04 00:00:00",
+  "updated_at": "2022-09-04 00:00:00",
+  "name": "Heal",
+  "model_name": "spells/Heal",
+  "description": "A basic healing spell",
+  "spell_category": "religion",
+  "school": "worship",
+  "range": 10.0,
+  "modifiers": []
+}

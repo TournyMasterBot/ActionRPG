@@ -2,12 +2,13 @@
 using ActionRpg.Models.DatastoreCoreModels;
 using ActionRpg.Models.Interfaces;
 using Newtonsoft.Json;
+using System.Collections.Concurrent;
 using System.Data;
 using System.Data.SQLite;
 using System.Text;
 using static ActionRpg.Models.ServerConstants;
 
-namespace ActionRpg.Models.DatastoreModels
+namespace ActionRpg.Models.Datastore
 {
     public class SqliteDatastore : IDatastore
     {
@@ -64,12 +65,34 @@ namespace ActionRpg.Models.DatastoreModels
         {
             try
             {
+                if(conn.State == ConnectionState.Open)
+                {
+                    return true;
+                }
                 conn.Open();
                 return true;
             }
             catch(Exception ex)
             {
                 log.Error(ex, "SqliteDatastore.OpenConnection");
+                return false;
+            }
+        }
+
+        public bool CloseConnection()
+        {
+            try
+            {
+                if(conn.State == ConnectionState.Closed)
+                {
+                    return true;
+                }
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex, "SqliteDatastore.CloseConnection");
                 return false;
             }
         }
@@ -215,8 +238,34 @@ namespace ActionRpg.Models.DatastoreModels
 
         public async Task<T[]> GetListFromDatastore<T>(TableGetInput[] input)
         {
-            await Task.FromResult(0);
-            throw new NotImplementedException();
+            var result = new List<T>();
+            foreach(var request in input)
+            {
+                var data = await GetFromDatastore<T>(request);
+                if(data != null)
+                {
+                    result.Add(data);
+                }
+            }
+            return result.ToArray();
+        }
+
+        public async Task<T[]> ParallelGetListFromDatastore<T>(TableGetInput[] input, int maxParallel = 4)
+        {
+            var result = new ConcurrentBag<T>();
+            var options = new ParallelOptions()
+            {
+                MaxDegreeOfParallelism = maxParallel
+            };
+            await Parallel.ForEachAsync(input, options, async (request, ct) =>
+            {
+                var data = await GetFromDatastore<T>(request);
+                if (data != null)
+                {
+                    result.Add(data);
+                }
+            });
+            return result.ToArray();
         }
 
         /// <summary>

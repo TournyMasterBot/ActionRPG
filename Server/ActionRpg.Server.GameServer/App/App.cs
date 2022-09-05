@@ -1,6 +1,6 @@
 ﻿using ActionRpg.Core.Helpers;
 using ActionRpg.Models.AppModels;
-using ActionRpg.Models.DatastoreModels;
+using ActionRpg.Models.Datastore;
 using ActionRpg.Models.Interfaces;
 using System.Diagnostics;
 using static ActionRpg.Core.Constants;
