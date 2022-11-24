@@ -5,7 +5,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Server/ActionRpg.Server.Grpc/ActionRpg.Server.Grpc.csproj", "Server/ActionRpg.Server.Grpc/"]
 COPY ["Core/ActionRpg.Models/ActionRpg.Models.csproj", "Core/ActionRpg.Models/"]
